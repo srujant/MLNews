@@ -28,6 +28,10 @@ def results():
 @app.route('/test')
 def test():
     return render_template('test.html')
+
+@app.route('/stream')
+def stream():
+    
     
 @app.route('/compute-result',methods=['POST'])
 def compute():
