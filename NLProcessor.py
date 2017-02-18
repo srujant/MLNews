@@ -3,6 +3,11 @@ from spacy import load
 from goose import Goose
 from requests import get    
 import requests
+import re
+import sys  
+
+reload(sys)  
+sys.setdefaultencoding('utf8')
 nlp = load('en')    
 
 def countEntity(text):
@@ -70,6 +75,7 @@ def getLocations(text):
     return locations
 
 def getNGrams(text):
+    text = re.sub(r'[^\w]', ' ', text)
     N_GRAM_SIZE = 4
     ngrams = []
     processed_text = nlp(unicode(text))
@@ -77,8 +83,8 @@ def getNGrams(text):
     gramCount = 0
     for i in range(0,len(processed_text) - 3):
         localGram = []
-        for i in range(0,4):
-            localGram.append(processed_text[index])
+        for i in range(0,4):    
+            localGram.append(str(processed_text[index]).lower())
             index = index + 1
         gramCount+=1
         index = gramCount
@@ -122,6 +128,8 @@ def sentiment(textbody):
     results.append(neu / total)
     results.append(compound / total)
 
+    return results
+
 def getMLP(textbody):
     send = []
     entities = countEntity(textbody)
@@ -130,7 +138,6 @@ def getMLP(textbody):
 
 
     send.append(entities)
-    send.append(ngrams)
     send.append(sent)
     
     return send
