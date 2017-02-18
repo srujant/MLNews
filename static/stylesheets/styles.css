@@ -51,3 +51,59 @@ button {
 .main-panel-body {
     color: #2c3e50 !important;
 }
+
+.results-panel {
+    margin-top: 30px;
+}
+
+.btn {
+    border: 0 none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+
+.btn-blue { 
+  color: #FFFFFF; 
+  background-color: #3498DB; 
+  border-color: #2980B9; 
+} 
+ 
+.btn-blue:hover, 
+.btn-blue:focus, 
+.btn-blue:active, 
+.btn-blue.active, 
+.open .dropdown-toggle.btn-blue { 
+  color: #FFFFFF; 
+  background-color: #2980b9; 
+  border-color: #2980B9; 
+} 
+ 
+.btn-blue:active, 
+.btn-blue.active, 
+.open .dropdown-toggle.btn-blue { 
+  background-image: none; 
+} 
+
+
+
+
+ 
+.navbar-default .navbar-toggle {
+    border: none !important;
+    background: none !important;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background: none !important;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar {
+    background-color: white !important;
+}
