@@ -123,11 +123,14 @@ def sentiment(textbody):
     results.append(compound / total)
 
 def getMLP(textbody):
+    send = []
     entities = countEntity(textbody)
     getNGrams = getNGrams(textbody)
     sent = sentiment(textbody)
 
-    entities.append(getNGrams)
-    entities.append(sent)
+
+    send.append(entities)
+    send.append(getNGrams)
+    send.append(sent)
     
-    return entities
+    return send
