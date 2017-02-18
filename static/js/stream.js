@@ -1,12 +1,12 @@
 Cesium.BingMapsApi.defaultKey = "rAT6FD3QWEAHqFKTyVOH~PGug46gl7KWuYW5EmoKrhA~An9_0N3tOAo3VQ-1JgMBj3hOgSBb1-610evZpUQVW48gUc62JQ9RjNzRKSWBPLqI";
 
 var viewer = new Cesium.Viewer('cesiumContainer');
-  viewer.dataSources.add(Cesium.GeoJsonDataSource.load('static/js/cesium/Apps/SampleData/ne_10m_us_states.topojson', {
+  viewer.dataSources.add(Cesium.GeoJsonDataSource.load('static/js/cesium/Apps/SampleData/map.geojson', {
         stroke: Cesium.Color.BLACK,
         fill: Cesium.Color.BLUE.withAlpha(0.2),
         strokeWidth: 0
     }));
-   var promise = Cesium.GeoJsonDataSource.load('static/js/cesium/Apps/SampleData/ne_10m_us_states.topojson');
+   var promise = Cesium.GeoJsonDataSource.load('static/js/cesium/Apps/SampleData/map.geojson');
     promise.then(function(dataSource) {
         viewer.dataSources.add(dataSource);
 

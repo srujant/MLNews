@@ -22,6 +22,10 @@ def stream():
 def bias():
     return render_template('bias.html')
 
+@app.route('/search')
+def search():
+    return render_template('search.html')
+    
 app.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8080)))
 
 if __name__ == '__main__':

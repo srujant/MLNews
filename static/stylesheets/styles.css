@@ -6,8 +6,9 @@ body {
 }
 
 .logo {
-    width: 50%;
+    width: 75%;
     margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 nav {
@@ -35,4 +36,18 @@ button {
 
 #cesiumContainer {
     margin: 0 auto;
+}
+
+.main-panel {
+    border-color: #34495e !important;
+}
+
+.main-panel-heading {
+    background-color: #34495e !important;
+    color: white !important;
+    font-weight: 700;
+}
+
+.main-panel-body {
+    color: #2c3e50 !important;
 }
