@@ -59,5 +59,7 @@ def getLocations(text):
     processed_text = nlp(unicode(text))
     for ent in processed_text.ents:
         if ent.label_ == u'GPE':
-            locations.append(ent.text)
+            locations.append(ent.text.upper())
+            print(ent.text.upper())
     return locations
+
