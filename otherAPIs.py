@@ -63,6 +63,7 @@ states = {
 
 # format of return will be:
 # [general, technology, sports, business, entertainment, science, other]
+# OTHER IS A DICTIONARY
 # within each element of this list, you will have:
 # [name of article, url, provider, description]
 
@@ -104,6 +105,7 @@ def generateResponse():
 	entertainmentList = bing_search('entertainment')
 	scienceList = bing_search('science')
 	scienceList += bing_search('health')
+	otherDict = getAllStates()
 
 	masterList = []
 
@@ -113,6 +115,7 @@ def generateResponse():
 	masterList.append(buisnessList)
 	masterList.append(entertainmentList)
 	masterList.append(scienceList)
+	masterList.append(otherDict)
 
 	return masterList
 
@@ -150,5 +153,3 @@ def getAllStates():
 		d[key] = generateStates(value)
 
 	return d
-
-
