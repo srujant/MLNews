@@ -105,7 +105,6 @@ def generateResponse():
 	scienceList = bing_search('science')
 	scienceList += bing_search('health')
 
-
 	masterList = []
 
 	masterList.append(generalList)
@@ -155,4 +154,4 @@ def getAllStates():
 
 	return d
 
-print(getAllStates())
+
