@@ -1,0 +1,8 @@
+ROLES
+-----------------
+
+Bobby: front-end work
+Srujan: ML, front-end
+Tim: Natural Language processing
+Waruna: ML
+Rachit: front-end, web-application architecture, API work
