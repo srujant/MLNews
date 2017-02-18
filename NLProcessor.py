@@ -59,11 +59,14 @@ def countEntity(text):
     return entityCount
 
 def getLocations(text):
+    seen = set()
     locations = []
     processed_text = nlp(unicode(text))
     for ent in processed_text.ents:
         if ent.label_ == u'GPE':
-            locations.append(ent.text.upper())
+            if not ent.text.upper() in seen:
+                locations.append(ent.text.upper())
+                seen.add(ent.text.upper())
     return locations
 
 def getNGrams(text):
@@ -83,15 +86,13 @@ def getNGrams(text):
     return ngrams
 
 
-def HTMLParser(url , description):
+def HTMLParser(url):
     response = get(url)
     extractor = Goose()
     article = extractor.extract(raw_html=response.content)
     text = article.cleaned_text
 
-    results = getLocations(description)
-    for location in getLocations(text):
-        results.append(location)
+    results = getLocations(text):
 
     return results
 
@@ -120,3 +121,14 @@ def sentiment(textbody):
     results.append(pos / total)
     results.append(neu / total)
     results.append(compound / total)
+
+def getMLP(textbody):
+    entities = countEntity(textbody)
+    getNGrams = getNGrams(textbody)
+    sent = sentiment(textbody)
+
+    entities.append(getNGrams)
+    for result in sent:
+        entities.append(result)
+
+    return entities
