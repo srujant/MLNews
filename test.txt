@@ -1,0 +1,38 @@
+ROLES
+-----------------
+
+Bobby: front-end work
+Srujan: data streaming
+Tim: Natural Language processing
+Waruna: ML
+Rachit: front-end
+
+
+PIECES WE NEED:
+1. front end
+2. machine learning / NLP processing
+3. way to stream in articles and TWITTER
+4. backend to store weights and news stories
+
+
+BACKEND:
+every article must have:
+
+URL, author, Title, credibility rating, topic, locations, and credibility rating
+
+
+FRONTEND:
+1. be able to calculate heat map
+2. record coordinates (or some sort of location for click)
+3. be able to have a pop up on click
+
+FIRST PRIORITY:
+1. Set up NLP
+2. get data streaming (and twitter) and heat map set up
+
+
+
+TIM'S NLP CLASS:
+- name: NLProcessor
+
+	
