@@ -5,8 +5,9 @@ import requests
 import time
 import ast
 import NLProcessor as nlp
+from firebase import firebase
 
-def getArticles():
+def getNewsAPI():
 	articles = urllib2.urlopen("https://newsapi.org/v1/sources").read()
 	articles = ast.literal_eval(articles)
 	articles = articles.items()[1]
@@ -20,15 +21,15 @@ def getArticles():
 			presentArticles = json.dumps(r.json()['articles'])
 			jsonReceived = json.loads(presentArticles)[0]
 			url = jsonReceived[u'url']
-			text = nlp.HTMLParser(url)
-			print text
+			locations = nlp.HTMLParser(url)
+			text_file.write(str(locations).decode('unicode_escape').encode('ascii','ignore'))
 			text_file.write('\n\n\n\n')
 			
 
 	text_file.close()
 
 def main():
-	getArticles()
+	getNewsAPI()
 
 
 if __name__ == "__main__":
