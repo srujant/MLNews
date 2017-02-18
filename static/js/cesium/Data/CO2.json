@@ -1,0 +1,2822 @@
+[
+  {
+    "Country": "Afghanistan",
+    "Year": 1990,
+    "CO2": 15.96118575
+  },
+  {
+    "Country": "Afghanistan",
+    "Year": 2001,
+    "CO2": 15.13966907
+  },
+  {
+    "Country": "Afghanistan",
+    "Year": 2012,
+    "CO2": 30.75894237
+  },
+  {
+    "Country": "Albania",
+    "Year": 1990,
+    "CO2": 12.18067501
+  },
+  {
+    "Country": "Albania",
+    "Year": 2001,
+    "CO2": 7.835589983
+  },
+  {
+    "Country": "Albania",
+    "Year": 2012,
+    "CO2": 7.219109095
+  },
+  {
+    "Country": "Algeria",
+    "Year": 1990,
+    "CO2": 94.07452956
+  },
+  {
+    "Country": "Algeria",
+    "Year": 2001,
+    "CO2": 118.2521717
+  },
+  {
+    "Country": "Algeria",
+    "Year": 2012,
+    "CO2": 189.0811155
+  },
+  {
+    "Country": "Angola",
+    "Year": 1990,
+    "CO2": 105.0184736
+  },
+  {
+    "Country": "Angola",
+    "Year": 2001,
+    "CO2": 121.3546508
+  },
+  {
+    "Country": "Angola",
+    "Year": 2012,
+    "CO2": 199.7218778
+  },
+  {
+    "Country": "Antigua & Barbuda",
+    "Year": 1990,
+    "CO2": 0.403833607
+  },
+  {
+    "Country": "Antigua & Barbuda",
+    "Year": 2001,
+    "CO2": 0.614882963
+  },
+  {
+    "Country": "Antigua & Barbuda",
+    "Year": 2012,
+    "CO2": 1.136527432
+  },
+  {
+    "Country": "Argentina",
+    "Year": 1990,
+    "CO2": 312.9333694
+  },
+  {
+    "Country": "Argentina",
+    "Year": 2001,
+    "CO2": 345.0855614
+  },
+  {
+    "Country": "Argentina",
+    "Year": 2012,
+    "CO2": 405.0347549
+  },
+  {
+    "Country": "Armenia",
+    "Year": 1990,
+    "CO2": 23.12381426
+  },
+  {
+    "Country": "Armenia",
+    "Year": 2001,
+    "CO2": 6.66032558
+  },
+  {
+    "Country": "Armenia",
+    "Year": 2012,
+    "CO2": 9.304142072
+  },
+  {
+    "Country": "Australia",
+    "Year": 1990,
+    "CO2": 503.7845777
+  },
+  {
+    "Country": "Australia",
+    "Year": 2001,
+    "CO2": 646.8093474
+  },
+  {
+    "Country": "Australia",
+    "Year": 2012,
+    "CO2": 685.052937
+  },
+  {
+    "Country": "Austria",
+    "Year": 1990,
+    "CO2": 64.31361879
+  },
+  {
+    "Country": "Austria",
+    "Year": 2001,
+    "CO2": 63.76662877
+  },
+  {
+    "Country": "Austria",
+    "Year": 2012,
+    "CO2": 83.65443451
+  },
+  {
+    "Country": "Azerbaijan",
+    "Year": 1990,
+    "CO2": 71.15368644
+  },
+  {
+    "Country": "Azerbaijan",
+    "Year": 2001,
+    "CO2": 56.04159742
+  },
+  {
+    "Country": "Azerbaijan",
+    "Year": 2012,
+    "CO2": 69.33737508
+  },
+  {
+    "Country": "Bahamas, The",
+    "Year": 1990,
+    "CO2": 0.907610173
+  },
+  {
+    "Country": "Bahamas, The",
+    "Year": 2001,
+    "CO2": 1.074003642
+  },
+  {
+    "Country": "Bahamas, The",
+    "Year": 2012,
+    "CO2": 4.172847205
+  },
+  {
+    "Country": "Bahrain",
+    "Year": 1990,
+    "CO2": 15.28704083
+  },
+  {
+    "Country": "Bahrain",
+    "Year": 2001,
+    "CO2": 22.0048238
+  },
+  {
+    "Country": "Bahrain",
+    "Year": 2012,
+    "CO2": 33.25090111
+  },
+  {
+    "Country": "Bangladesh",
+    "Year": 1990,
+    "CO2": 119.4942068
+  },
+  {
+    "Country": "Bangladesh",
+    "Year": 2001,
+    "CO2": 147.6013594
+  },
+  {
+    "Country": "Bangladesh",
+    "Year": 2012,
+    "CO2": 189.8557786
+  },
+  {
+    "Country": "Barbados",
+    "Year": 1990,
+    "CO2": 2.827493658
+  },
+  {
+    "Country": "Barbados",
+    "Year": 2001,
+    "CO2": 3.163505658
+  },
+  {
+    "Country": "Barbados",
+    "Year": 2012,
+    "CO2": 3.349630118
+  },
+  {
+    "Country": "Belarus",
+    "Year": 1990,
+    "CO2": 131.8896893
+  },
+  {
+    "Country": "Belarus",
+    "Year": 2001,
+    "CO2": 65.89931136
+  },
+  {
+    "Country": "Belarus",
+    "Year": 2012,
+    "CO2": 75.34898241
+  },
+  {
+    "Country": "Belgium",
+    "Year": 1990,
+    "CO2": 120.6866324
+  },
+  {
+    "Country": "Belgium",
+    "Year": 2001,
+    "CO2": 140.4148429
+  },
+  {
+    "Country": "Belgium",
+    "Year": 2012,
+    "CO2": 125.1084542
+  },
+  {
+    "Country": "Belize",
+    "Year": 1990,
+    "CO2": 10.5785724
+  },
+  {
+    "Country": "Belize",
+    "Year": 2001,
+    "CO2": 12.54991297
+  },
+  {
+    "Country": "Belize",
+    "Year": 2012,
+    "CO2": 14.59340576
+  },
+  {
+    "Country": "Benin",
+    "Year": 1990,
+    "CO2": 20.36864808
+  },
+  {
+    "Country": "Benin",
+    "Year": 2001,
+    "CO2": 17.83490935
+  },
+  {
+    "Country": "Benin",
+    "Year": 2012,
+    "CO2": 21.75512722
+  },
+  {
+    "Country": "Bhutan",
+    "Year": 1990,
+    "CO2": -1.609984737
+  },
+  {
+    "Country": "Bhutan",
+    "Year": 2001,
+    "CO2": -7.03605783
+  },
+  {
+    "Country": "Bhutan",
+    "Year": 2012,
+    "CO2": -7.967647977
+  },
+  {
+    "Country": "Bolivia",
+    "Year": 1990,
+    "CO2": 105.6180341
+  },
+  {
+    "Country": "Bolivia",
+    "Year": 2001,
+    "CO2": 105.4048289
+  },
+  {
+    "Country": "Bolivia",
+    "Year": 2012,
+    "CO2": 136.4737383
+  },
+  {
+    "Country": "Bosnia & Herzegovina",
+    "Year": 1990,
+    "CO2": 25.70842106
+  },
+  {
+    "Country": "Bosnia & Herzegovina",
+    "Year": 2001,
+    "CO2": 19.54988367
+  },
+  {
+    "Country": "Bosnia & Herzegovina",
+    "Year": 2012,
+    "CO2": 27.75257131
+  },
+  {
+    "Country": "Botswana",
+    "Year": 1990,
+    "CO2": 22.32631344
+  },
+  {
+    "Country": "Botswana",
+    "Year": 2001,
+    "CO2": 22.98382121
+  },
+  {
+    "Country": "Botswana",
+    "Year": 2012,
+    "CO2": 23.90260863
+  },
+  {
+    "Country": "Brazil",
+    "Year": 1990,
+    "CO2": 1606.59457
+  },
+  {
+    "Country": "Brazil",
+    "Year": 2001,
+    "CO2": 1945.289665
+  },
+  {
+    "Country": "Brazil",
+    "Year": 2012,
+    "CO2": 1823.148349
+  },
+  {
+    "Country": "Brunei",
+    "Year": 1990,
+    "CO2": 14.7600667
+  },
+  {
+    "Country": "Brunei",
+    "Year": 2001,
+    "CO2": 17.49952468
+  },
+  {
+    "Country": "Brunei",
+    "Year": 2012,
+    "CO2": 22.0674984
+  },
+  {
+    "Country": "Bulgaria",
+    "Year": 1990,
+    "CO2": 90.75894118
+  },
+  {
+    "Country": "Bulgaria",
+    "Year": 2001,
+    "CO2": 46.89693303
+  },
+  {
+    "Country": "Bulgaria",
+    "Year": 2012,
+    "CO2": 46.22466822
+  },
+  {
+    "Country": "Burkina Faso",
+    "Year": 1990,
+    "CO2": 24.80770586
+  },
+  {
+    "Country": "Burkina Faso",
+    "Year": 2001,
+    "CO2": 26.49701841
+  },
+  {
+    "Country": "Burkina Faso",
+    "Year": 2012,
+    "CO2": 33.00993514
+  },
+  {
+    "Country": "Burundi",
+    "Year": 1990,
+    "CO2": 11.21823406
+  },
+  {
+    "Country": "Burundi",
+    "Year": 2001,
+    "CO2": 6.626189292
+  },
+  {
+    "Country": "Burundi",
+    "Year": 2012,
+    "CO2": 6.908962408
+  },
+  {
+    "Country": "Cambodia",
+    "Year": 1990,
+    "CO2": 42.48462886
+  },
+  {
+    "Country": "Cambodia",
+    "Year": 2001,
+    "CO2": 49.59318121
+  },
+  {
+    "Country": "Cambodia",
+    "Year": 2012,
+    "CO2": 49.11605056
+  },
+  {
+    "Country": "Cameroon",
+    "Year": 1990,
+    "CO2": 187.6034999
+  },
+  {
+    "Country": "Cameroon",
+    "Year": 2001,
+    "CO2": 192.9056498
+  },
+  {
+    "Country": "Cameroon",
+    "Year": 2012,
+    "CO2": 191.1991654
+  },
+  {
+    "Country": "Canada",
+    "Year": 1990,
+    "CO2": 681.926201
+  },
+  {
+    "Country": "Canada",
+    "Year": 2001,
+    "CO2": 922.6702913
+  },
+  {
+    "Country": "Canada",
+    "Year": 2012,
+    "CO2": 856.2776049
+  },
+  {
+    "Country": "Cape Verde",
+    "Year": 1990,
+    "CO2": 0.206416724
+  },
+  {
+    "Country": "Cape Verde",
+    "Year": 2001,
+    "CO2": 0.295725761
+  },
+  {
+    "Country": "Cape Verde",
+    "Year": 2012,
+    "CO2": 0.430158563
+  },
+  {
+    "Country": "Central African Republic",
+    "Year": 1990,
+    "CO2": 51.772009
+  },
+  {
+    "Country": "Central African Republic",
+    "Year": 2001,
+    "CO2": 56.44753078
+  },
+  {
+    "Country": "Central African Republic",
+    "Year": 2012,
+    "CO2": 60.51782924
+  },
+  {
+    "Country": "Chad",
+    "Year": 1990,
+    "CO2": 33.86991161
+  },
+  {
+    "Country": "Chad",
+    "Year": 2001,
+    "CO2": 37.18215471
+  },
+  {
+    "Country": "Chad",
+    "Year": 2012,
+    "CO2": 43.26816788
+  },
+  {
+    "Country": "Chile",
+    "Year": 1990,
+    "CO2": 53.29643092
+  },
+  {
+    "Country": "Chile",
+    "Year": 2001,
+    "CO2": 62.89304313
+  },
+  {
+    "Country": "Chile",
+    "Year": 2012,
+    "CO2": 93.73860728
+  },
+  {
+    "Country": "China",
+    "Year": 1990,
+    "CO2": 3218.445384
+  },
+  {
+    "Country": "China",
+    "Year": 2001,
+    "CO2": 4504.52077
+  },
+  {
+    "Country": "China",
+    "Year": 2012,
+    "CO2": 10684.2866
+  },
+  {
+    "Country": "Colombia",
+    "Year": 1990,
+    "CO2": 167.3159049
+  },
+  {
+    "Country": "Colombia",
+    "Year": 2001,
+    "CO2": 182.6309695
+  },
+  {
+    "Country": "Colombia",
+    "Year": 2012,
+    "CO2": 199.6809447
+  },
+  {
+    "Country": "Comoros",
+    "Year": 1990,
+    "CO2": 0.431093054
+  },
+  {
+    "Country": "Comoros",
+    "Year": 2001,
+    "CO2": 0.612737442
+  },
+  {
+    "Country": "Comoros",
+    "Year": 2012,
+    "CO2": 0.602732508
+  },
+  {
+    "Country": "Congo, Rep.",
+    "Year": 1990,
+    "CO2": 13.78342696
+  },
+  {
+    "Country": "Congo, Rep.",
+    "Year": 2001,
+    "CO2": 15.496892
+  },
+  {
+    "Country": "Congo, Rep.",
+    "Year": 2012,
+    "CO2": 17.71687662
+  },
+  {
+    "Country": "Congo, Dem. Rep.",
+    "Year": 1990,
+    "CO2": 201.8696354
+  },
+  {
+    "Country": "Congo, Dem. Rep.",
+    "Year": 2001,
+    "CO2": 194.500274
+  },
+  {
+    "Country": "Congo, Dem. Rep.",
+    "Year": 2012,
+    "CO2": 201.5297063
+  },
+  {
+    "Country": "Cook Islands",
+    "Year": 1990,
+    "CO2": 0.070871747
+  },
+  {
+    "Country": "Cook Islands",
+    "Year": 2001,
+    "CO2": 0.085279312
+  },
+  {
+    "Country": "Cook Islands",
+    "Year": 2012,
+    "CO2": 0.185427822
+  },
+  {
+    "Country": "Costa Rica",
+    "Year": 1990,
+    "CO2": 14.45541315
+  },
+  {
+    "Country": "Costa Rica",
+    "Year": 2001,
+    "CO2": 2.572895832
+  },
+  {
+    "Country": "Costa Rica",
+    "Year": 2012,
+    "CO2": 4.972700619
+  },
+  {
+    "Country": "Cote d'Ivoire",
+    "Year": 1990,
+    "CO2": 24.6532875
+  },
+  {
+    "Country": "Cote d'Ivoire",
+    "Year": 2001,
+    "CO2": 15.29065827
+  },
+  {
+    "Country": "Cote d'Ivoire",
+    "Year": 2012,
+    "CO2": 35.77640906
+  },
+  {
+    "Country": "Croatia",
+    "Year": 1990,
+    "CO2": 26.88534129
+  },
+  {
+    "Country": "Croatia",
+    "Year": 2001,
+    "CO2": 14.20365467
+  },
+  {
+    "Country": "Croatia",
+    "Year": 2012,
+    "CO2": 11.75396235
+  },
+  {
+    "Country": "Cuba",
+    "Year": 1990,
+    "CO2": 38.48534087
+  },
+  {
+    "Country": "Cuba",
+    "Year": 2001,
+    "CO2": 19.99401398
+  },
+  {
+    "Country": "Cuba",
+    "Year": 2012,
+    "CO2": 34.79227717
+  },
+  {
+    "Country": "Cyprus",
+    "Year": 1990,
+    "CO2": 4.992680352
+  },
+  {
+    "Country": "Cyprus",
+    "Year": 2001,
+    "CO2": 7.434120388
+  },
+  {
+    "Country": "Cyprus",
+    "Year": 2012,
+    "CO2": 7.223029989
+  },
+  {
+    "Country": "Czech Republic",
+    "Year": 1990,
+    "CO2": 166.9666553
+  },
+  {
+    "Country": "Czech Republic",
+    "Year": 2001,
+    "CO2": 130.5420571
+  },
+  {
+    "Country": "Czech Republic",
+    "Year": 2012,
+    "CO2": 115.3365564
+  },
+  {
+    "Country": "Denmark",
+    "Year": 1990,
+    "CO2": 67.41193633
+  },
+  {
+    "Country": "Denmark",
+    "Year": 2001,
+    "CO2": 61.91913287
+  },
+  {
+    "Country": "Denmark",
+    "Year": 2012,
+    "CO2": 52.33321239
+  },
+  {
+    "Country": "Djibouti",
+    "Year": 1990,
+    "CO2": 0.948420821
+  },
+  {
+    "Country": "Djibouti",
+    "Year": 2001,
+    "CO2": 1.064345046
+  },
+  {
+    "Country": "Djibouti",
+    "Year": 2012,
+    "CO2": 2.575220132
+  },
+  {
+    "Country": "Dominica",
+    "Year": 1990,
+    "CO2": 0.120491322
+  },
+  {
+    "Country": "Dominica",
+    "Year": 2001,
+    "CO2": 0.206010596
+  },
+  {
+    "Country": "Dominica",
+    "Year": 2012,
+    "CO2": 0.318659928
+  },
+  {
+    "Country": "Dominican Republic",
+    "Year": 1990,
+    "CO2": 18.57406774
+  },
+  {
+    "Country": "Dominican Republic",
+    "Year": 2001,
+    "CO2": 25.62840278
+  },
+  {
+    "Country": "Dominican Republic",
+    "Year": 2012,
+    "CO2": 31.18440898
+  },
+  {
+    "Country": "Ecuador",
+    "Year": 1990,
+    "CO2": 108.6603388
+  },
+  {
+    "Country": "Ecuador",
+    "Year": 2001,
+    "CO2": 123.1456723
+  },
+  {
+    "Country": "Ecuador",
+    "Year": 2012,
+    "CO2": 138.1583334
+  },
+  {
+    "Country": "Egypt",
+    "Year": 1990,
+    "CO2": 123.706579
+  },
+  {
+    "Country": "Egypt",
+    "Year": 2001,
+    "CO2": 181.3482482
+  },
+  {
+    "Country": "Egypt",
+    "Year": 2012,
+    "CO2": 287.9734207
+  },
+  {
+    "Country": "El Salvador",
+    "Year": 1990,
+    "CO2": 8.246400293
+  },
+  {
+    "Country": "El Salvador",
+    "Year": 2001,
+    "CO2": 12.53111707
+  },
+  {
+    "Country": "El Salvador",
+    "Year": 2012,
+    "CO2": 13.06858479
+  },
+  {
+    "Country": "Equatorial Guinea",
+    "Year": 1990,
+    "CO2": 5.587970655
+  },
+  {
+    "Country": "Equatorial Guinea",
+    "Year": 2001,
+    "CO2": 15.86280494
+  },
+  {
+    "Country": "Equatorial Guinea",
+    "Year": 2012,
+    "CO2": 26.18013974
+  },
+  {
+    "Country": "Eritrea",
+    "Year": 1990,
+    "CO2": ""
+  },
+  {
+    "Country": "Eritrea",
+    "Year": 2001,
+    "CO2": 7.066349121
+  },
+  {
+    "Country": "Eritrea",
+    "Year": 2012,
+    "CO2": 6.982769676
+  },
+  {
+    "Country": "Estonia",
+    "Year": 1990,
+    "CO2": 38.29948933
+  },
+  {
+    "Country": "Estonia",
+    "Year": 2001,
+    "CO2": 25.91206622
+  },
+  {
+    "Country": "Estonia",
+    "Year": 2012,
+    "CO2": 29.85633797
+  },
+  {
+    "Country": "Ethiopia",
+    "Year": 1990,
+    "CO2": 13.22217699
+  },
+  {
+    "Country": "Ethiopia",
+    "Year": 2001,
+    "CO2": 102.8248149
+  },
+  {
+    "Country": "Ethiopia",
+    "Year": 2012,
+    "CO2": 143.8746081
+  },
+  {
+    "Country": "Fiji",
+    "Year": 1990,
+    "CO2": 2.133447263
+  },
+  {
+    "Country": "Fiji",
+    "Year": 2001,
+    "CO2": 1.692944402
+  },
+  {
+    "Country": "Fiji",
+    "Year": 2012,
+    "CO2": 1.726562625
+  },
+  {
+    "Country": "Finland",
+    "Year": 1990,
+    "CO2": 57.49484694
+  },
+  {
+    "Country": "Finland",
+    "Year": 2001,
+    "CO2": 60.93063801
+  },
+  {
+    "Country": "Finland",
+    "Year": 2012,
+    "CO2": 69.36120687
+  },
+  {
+    "Country": "France",
+    "Year": 1990,
+    "CO2": 496.8353252
+  },
+  {
+    "Country": "France",
+    "Year": 2001,
+    "CO2": 442.8025938
+  },
+  {
+    "Country": "France",
+    "Year": 2012,
+    "CO2": 432.3958925
+  },
+  {
+    "Country": "Gabon",
+    "Year": 1990,
+    "CO2": 7.104315531
+  },
+  {
+    "Country": "Gabon",
+    "Year": 2001,
+    "CO2": 6.17711557
+  },
+  {
+    "Country": "Gabon",
+    "Year": 2012,
+    "CO2": 6.954793892
+  },
+  {
+    "Country": "Gambia, The",
+    "Year": 1990,
+    "CO2": 3.919435013
+  },
+  {
+    "Country": "Gambia, The",
+    "Year": 2001,
+    "CO2": 5.008576161
+  },
+  {
+    "Country": "Gambia, The",
+    "Year": 2012,
+    "CO2": 6.882637332
+  },
+  {
+    "Country": "Georgia",
+    "Year": 1990,
+    "CO2": 44.81477156
+  },
+  {
+    "Country": "Georgia",
+    "Year": 2001,
+    "CO2": 8.554514946
+  },
+  {
+    "Country": "Georgia",
+    "Year": 2012,
+    "CO2": 10.78226751
+  },
+  {
+    "Country": "Germany",
+    "Year": 1990,
+    "CO2": 1111.266596
+  },
+  {
+    "Country": "Germany",
+    "Year": 2001,
+    "CO2": 942.377306
+  },
+  {
+    "Country": "Germany",
+    "Year": 2012,
+    "CO2": 810.2499287
+  },
+  {
+    "Country": "Ghana",
+    "Year": 1990,
+    "CO2": 49.22585909
+  },
+  {
+    "Country": "Ghana",
+    "Year": 2001,
+    "CO2": 50.34745224
+  },
+  {
+    "Country": "Ghana",
+    "Year": 2012,
+    "CO2": 58.84107835
+  },
+  {
+    "Country": "Greece",
+    "Year": 1990,
+    "CO2": 98.35330384
+  },
+  {
+    "Country": "Greece",
+    "Year": 2001,
+    "CO2": 117.4194237
+  },
+  {
+    "Country": "Greece",
+    "Year": 2012,
+    "CO2": 98.30510158
+  },
+  {
+    "Country": "Grenada",
+    "Year": 1990,
+    "CO2": 1.567970102
+  },
+  {
+    "Country": "Grenada",
+    "Year": 2001,
+    "CO2": 2.127627992
+  },
+  {
+    "Country": "Grenada",
+    "Year": 2012,
+    "CO2": 1.944335425
+  },
+  {
+    "Country": "Guatemala",
+    "Year": 1990,
+    "CO2": 28.90808263
+  },
+  {
+    "Country": "Guatemala",
+    "Year": 2001,
+    "CO2": 34.72692161
+  },
+  {
+    "Country": "Guatemala",
+    "Year": 2012,
+    "CO2": 39.27485172
+  },
+  {
+    "Country": "Guinea",
+    "Year": 1990,
+    "CO2": 21.47431414
+  },
+  {
+    "Country": "Guinea",
+    "Year": 2001,
+    "CO2": 24.14651246
+  },
+  {
+    "Country": "Guinea",
+    "Year": 2012,
+    "CO2": 28.87314493
+  },
+  {
+    "Country": "Guinea-Bissau",
+    "Year": 1990,
+    "CO2": 2.836154704
+  },
+  {
+    "Country": "Guinea-Bissau",
+    "Year": 2001,
+    "CO2": 2.969553905
+  },
+  {
+    "Country": "Guinea-Bissau",
+    "Year": 2012,
+    "CO2": 4.426919468
+  },
+  {
+    "Country": "Guyana",
+    "Year": 1990,
+    "CO2": 6.299741715
+  },
+  {
+    "Country": "Guyana",
+    "Year": 2001,
+    "CO2": 6.840997748
+  },
+  {
+    "Country": "Guyana",
+    "Year": 2012,
+    "CO2": 7.63708306
+  },
+  {
+    "Country": "Haiti",
+    "Year": 1990,
+    "CO2": 4.997091439
+  },
+  {
+    "Country": "Haiti",
+    "Year": 2001,
+    "CO2": 6.968452363
+  },
+  {
+    "Country": "Haiti",
+    "Year": 2012,
+    "CO2": 7.905155754
+  },
+  {
+    "Country": "Honduras",
+    "Year": 1990,
+    "CO2": 51.0781766
+  },
+  {
+    "Country": "Honduras",
+    "Year": 2001,
+    "CO2": 43.43468852
+  },
+  {
+    "Country": "Honduras",
+    "Year": 2012,
+    "CO2": 47.70171244
+  },
+  {
+    "Country": "Hungary",
+    "Year": 1990,
+    "CO2": 94.89272771
+  },
+  {
+    "Country": "Hungary",
+    "Year": 2001,
+    "CO2": 78.07159308
+  },
+  {
+    "Country": "Hungary",
+    "Year": 2012,
+    "CO2": 63.42818752
+  },
+  {
+    "Country": "Iceland",
+    "Year": 1990,
+    "CO2": 3.076794263
+  },
+  {
+    "Country": "Iceland",
+    "Year": 2001,
+    "CO2": 2.958471471
+  },
+  {
+    "Country": "Iceland",
+    "Year": 2012,
+    "CO2": 2.642535603
+  },
+  {
+    "Country": "India",
+    "Year": 1990,
+    "CO2": 1212.020634
+  },
+  {
+    "Country": "India",
+    "Year": 2001,
+    "CO2": 1638.912935
+  },
+  {
+    "Country": "India",
+    "Year": 2012,
+    "CO2": 2887.083921
+  },
+  {
+    "Country": "Indonesia",
+    "Year": 1990,
+    "CO2": 1025.744004
+  },
+  {
+    "Country": "Indonesia",
+    "Year": 2001,
+    "CO2": 1529.384971
+  },
+  {
+    "Country": "Indonesia",
+    "Year": 2012,
+    "CO2": 1981.003261
+  },
+  {
+    "Country": "Iran",
+    "Year": 1990,
+    "CO2": 263.2650483
+  },
+  {
+    "Country": "Iran",
+    "Year": 2001,
+    "CO2": 461.8281934
+  },
+  {
+    "Country": "Iran",
+    "Year": 2012,
+    "CO2": 711.8812101
+  },
+  {
+    "Country": "Iraq",
+    "Year": 1990,
+    "CO2": 156.3692939
+  },
+  {
+    "Country": "Iraq",
+    "Year": 2001,
+    "CO2": 184.0012968
+  },
+  {
+    "Country": "Iraq",
+    "Year": 2012,
+    "CO2": 256.4381336
+  },
+  {
+    "Country": "Ireland",
+    "Year": 1990,
+    "CO2": 55.69821048
+  },
+  {
+    "Country": "Ireland",
+    "Year": 2001,
+    "CO2": 69.00103459
+  },
+  {
+    "Country": "Ireland",
+    "Year": 2012,
+    "CO2": 58.44684698
+  },
+  {
+    "Country": "Israel",
+    "Year": 1990,
+    "CO2": 43.35618827
+  },
+  {
+    "Country": "Israel",
+    "Year": 2001,
+    "CO2": 71.95272931
+  },
+  {
+    "Country": "Israel",
+    "Year": 2012,
+    "CO2": 93.81836966
+  },
+  {
+    "Country": "Italy",
+    "Year": 1990,
+    "CO2": 482.93779
+  },
+  {
+    "Country": "Italy",
+    "Year": 2001,
+    "CO2": 499.7557928
+  },
+  {
+    "Country": "Italy",
+    "Year": 2012,
+    "CO2": 431.7653428
+  },
+  {
+    "Country": "Jamaica",
+    "Year": 1990,
+    "CO2": 9.583797722
+  },
+  {
+    "Country": "Jamaica",
+    "Year": 2001,
+    "CO2": 12.51363443
+  },
+  {
+    "Country": "Jamaica",
+    "Year": 2012,
+    "CO2": 9.585321501
+  },
+  {
+    "Country": "Japan",
+    "Year": 1990,
+    "CO2": 1116.377697
+  },
+  {
+    "Country": "Japan",
+    "Year": 2001,
+    "CO2": 1195.847548
+  },
+  {
+    "Country": "Japan",
+    "Year": 2012,
+    "CO2": 1207.300059
+  },
+  {
+    "Country": "Jordan",
+    "Year": 1990,
+    "CO2": 17.29609915
+  },
+  {
+    "Country": "Jordan",
+    "Year": 2001,
+    "CO2": 19.55918758
+  },
+  {
+    "Country": "Jordan",
+    "Year": 2012,
+    "CO2": 27.42307215
+  },
+  {
+    "Country": "Kazakhstan",
+    "Year": 1990,
+    "CO2": 293.494658
+  },
+  {
+    "Country": "Kazakhstan",
+    "Year": 2001,
+    "CO2": 155.0889063
+  },
+  {
+    "Country": "Kazakhstan",
+    "Year": 2012,
+    "CO2": 291.4056604
+  },
+  {
+    "Country": "Kenya",
+    "Year": 1990,
+    "CO2": 44.9821929
+  },
+  {
+    "Country": "Kenya",
+    "Year": 2001,
+    "CO2": 46.22769684
+  },
+  {
+    "Country": "Kenya",
+    "Year": 2012,
+    "CO2": 69.59774815
+  },
+  {
+    "Country": "Kiribati",
+    "Year": 1990,
+    "CO2": 0.036546159
+  },
+  {
+    "Country": "Kiribati",
+    "Year": 2001,
+    "CO2": 0.043618142
+  },
+  {
+    "Country": "Kiribati",
+    "Year": 2012,
+    "CO2": 0.076712257
+  },
+  {
+    "Country": "Korea, Dem. Rep. (North)",
+    "Year": 1990,
+    "CO2": 164.6913027
+  },
+  {
+    "Country": "Korea, Dem. Rep. (North)",
+    "Year": 2001,
+    "CO2": 109.0958766
+  },
+  {
+    "Country": "Korea, Dem. Rep. (North)",
+    "Year": 2012,
+    "CO2": 86.14037832
+  },
+  {
+    "Country": "Korea, Rep. (South)",
+    "Year": 1990,
+    "CO2": 261.4930565
+  },
+  {
+    "Country": "Korea, Rep. (South)",
+    "Year": 2001,
+    "CO2": 501.4631316
+  },
+  {
+    "Country": "Korea, Rep. (South)",
+    "Year": 2012,
+    "CO2": 661.3895145
+  },
+  {
+    "Country": "Kuwait",
+    "Year": 1990,
+    "CO2": 79.27350652
+  },
+  {
+    "Country": "Kuwait",
+    "Year": 2001,
+    "CO2": 145.1230278
+  },
+  {
+    "Country": "Kuwait",
+    "Year": 2012,
+    "CO2": 202.4698926
+  },
+  {
+    "Country": "Kyrgyzstan",
+    "Year": 1990,
+    "CO2": 26.72525246
+  },
+  {
+    "Country": "Kyrgyzstan",
+    "Year": 2001,
+    "CO2": 6.001683705
+  },
+  {
+    "Country": "Kyrgyzstan",
+    "Year": 2012,
+    "CO2": -0.238300345
+  },
+  {
+    "Country": "Laos",
+    "Year": 1990,
+    "CO2": 30.22853014
+  },
+  {
+    "Country": "Laos",
+    "Year": 2001,
+    "CO2": 27.83993509
+  },
+  {
+    "Country": "Laos",
+    "Year": 2012,
+    "CO2": 36.28130949
+  },
+  {
+    "Country": "Latvia",
+    "Year": 1990,
+    "CO2": 20.51861819
+  },
+  {
+    "Country": "Latvia",
+    "Year": 2001,
+    "CO2": 9.457989763
+  },
+  {
+    "Country": "Latvia",
+    "Year": 2012,
+    "CO2": -3.258355674
+  },
+  {
+    "Country": "Lebanon",
+    "Year": 1990,
+    "CO2": 7.38802603
+  },
+  {
+    "Country": "Lebanon",
+    "Year": 2001,
+    "CO2": 19.27136775
+  },
+  {
+    "Country": "Lebanon",
+    "Year": 2012,
+    "CO2": 24.2962961
+  },
+  {
+    "Country": "Lesotho",
+    "Year": 1990,
+    "CO2": 1.85276816
+  },
+  {
+    "Country": "Lesotho",
+    "Year": 2001,
+    "CO2": 2.25984985
+  },
+  {
+    "Country": "Lesotho",
+    "Year": 2012,
+    "CO2": 2.040379154
+  },
+  {
+    "Country": "Liberia",
+    "Year": 1990,
+    "CO2": 16.2395498
+  },
+  {
+    "Country": "Liberia",
+    "Year": 2001,
+    "CO2": 16.2756921
+  },
+  {
+    "Country": "Liberia",
+    "Year": 2012,
+    "CO2": 16.86468256
+  },
+  {
+    "Country": "Libya",
+    "Year": 1990,
+    "CO2": 95.40262283
+  },
+  {
+    "Country": "Libya",
+    "Year": 2001,
+    "CO2": 106.5954723
+  },
+  {
+    "Country": "Libya",
+    "Year": 2012,
+    "CO2": 130.6048099
+  },
+  {
+    "Country": "Lithuania",
+    "Year": 1990,
+    "CO2": 37.35499684
+  },
+  {
+    "Country": "Lithuania",
+    "Year": 2001,
+    "CO2": 23.07274649
+  },
+  {
+    "Country": "Lithuania",
+    "Year": 2012,
+    "CO2": 26.59160688
+  },
+  {
+    "Country": "Luxembourg",
+    "Year": 1990,
+    "CO2": 10.86943379
+  },
+  {
+    "Country": "Luxembourg",
+    "Year": 2001,
+    "CO2": 9.769501004
+  },
+  {
+    "Country": "Luxembourg",
+    "Year": 2012,
+    "CO2": 11.17421367
+  },
+  {
+    "Country": "Macedonia, FYR",
+    "Year": 1990,
+    "CO2": 10.15439807
+  },
+  {
+    "Country": "Macedonia, FYR",
+    "Year": 2001,
+    "CO2": 12.88429224
+  },
+  {
+    "Country": "Macedonia, FYR",
+    "Year": 2012,
+    "CO2": 12.33584016
+  },
+  {
+    "Country": "Madagascar",
+    "Year": 1990,
+    "CO2": 60.9403
+  },
+  {
+    "Country": "Madagascar",
+    "Year": 2001,
+    "CO2": 46.98557525
+  },
+  {
+    "Country": "Madagascar",
+    "Year": 2012,
+    "CO2": 57.65325417
+  },
+  {
+    "Country": "Malawi",
+    "Year": 1990,
+    "CO2": 16.12949391
+  },
+  {
+    "Country": "Malawi",
+    "Year": 2001,
+    "CO2": 12.91920057
+  },
+  {
+    "Country": "Malawi",
+    "Year": 2012,
+    "CO2": 16.58889583
+  },
+  {
+    "Country": "Malaysia",
+    "Year": 1990,
+    "CO2": -139.273965
+  },
+  {
+    "Country": "Malaysia",
+    "Year": 2001,
+    "CO2": 377.8212982
+  },
+  {
+    "Country": "Malaysia",
+    "Year": 2012,
+    "CO2": 433.3344159
+  },
+  {
+    "Country": "Maldives",
+    "Year": 1990,
+    "CO2": 0.197411823
+  },
+  {
+    "Country": "Maldives",
+    "Year": 2001,
+    "CO2": 0.640636223
+  },
+  {
+    "Country": "Maldives",
+    "Year": 2012,
+    "CO2": 1.211222932
+  },
+  {
+    "Country": "Mali",
+    "Year": 1990,
+    "CO2": 23.88138863
+  },
+  {
+    "Country": "Mali",
+    "Year": 2001,
+    "CO2": 28.7304608
+  },
+  {
+    "Country": "Mali",
+    "Year": 2012,
+    "CO2": 35.24124339
+  },
+  {
+    "Country": "Malta",
+    "Year": 1990,
+    "CO2": 2.538925867
+  },
+  {
+    "Country": "Malta",
+    "Year": 2001,
+    "CO2": 2.83259407
+  },
+  {
+    "Country": "Malta",
+    "Year": 2012,
+    "CO2": 3.10563275
+  },
+  {
+    "Country": "Mauritania",
+    "Year": 1990,
+    "CO2": 9.24246706
+  },
+  {
+    "Country": "Mauritania",
+    "Year": 2001,
+    "CO2": 9.621371466
+  },
+  {
+    "Country": "Mauritania",
+    "Year": 2012,
+    "CO2": 11.15839455
+  },
+  {
+    "Country": "Mauritius",
+    "Year": 1990,
+    "CO2": 2.126925497
+  },
+  {
+    "Country": "Mauritius",
+    "Year": 2001,
+    "CO2": 4.185404316
+  },
+  {
+    "Country": "Mauritius",
+    "Year": 2012,
+    "CO2": 5.52090392
+  },
+  {
+    "Country": "Mexico",
+    "Year": 1990,
+    "CO2": 477.0708819
+  },
+  {
+    "Country": "Mexico",
+    "Year": 2001,
+    "CO2": 608.421215
+  },
+  {
+    "Country": "Mexico",
+    "Year": 2012,
+    "CO2": 748.9117962
+  },
+  {
+    "Country": "Moldova",
+    "Year": 1990,
+    "CO2": 33.30111401
+  },
+  {
+    "Country": "Moldova",
+    "Year": 2001,
+    "CO2": 10.24584525
+  },
+  {
+    "Country": "Moldova",
+    "Year": 2012,
+    "CO2": 10.87739967
+  },
+  {
+    "Country": "Mongolia",
+    "Year": 1990,
+    "CO2": 55.43305228
+  },
+  {
+    "Country": "Mongolia",
+    "Year": 2001,
+    "CO2": 49.43481056
+  },
+  {
+    "Country": "Mongolia",
+    "Year": 2012,
+    "CO2": 59.11359131
+  },
+  {
+    "Country": "Montenegro",
+    "Year": 1990,
+    "CO2": ""
+  },
+  {
+    "Country": "Montenegro",
+    "Year": 2001,
+    "CO2": ""
+  },
+  {
+    "Country": "Montenegro",
+    "Year": 2012,
+    "CO2": 3.495356675
+  },
+  {
+    "Country": "Morocco",
+    "Year": 1990,
+    "CO2": 30.5326297
+  },
+  {
+    "Country": "Morocco",
+    "Year": 2001,
+    "CO2": 45.37431321
+  },
+  {
+    "Country": "Morocco",
+    "Year": 2012,
+    "CO2": 72.50918804
+  },
+  {
+    "Country": "Mozambique",
+    "Year": 1990,
+    "CO2": 54.86078433
+  },
+  {
+    "Country": "Mozambique",
+    "Year": 2001,
+    "CO2": 56.81979301
+  },
+  {
+    "Country": "Mozambique",
+    "Year": 2012,
+    "CO2": 57.65541649
+  },
+  {
+    "Country": "Myanmar",
+    "Year": 1990,
+    "CO2": 171.4804938
+  },
+  {
+    "Country": "Myanmar",
+    "Year": 2001,
+    "CO2": 153.097795
+  },
+  {
+    "Country": "Myanmar",
+    "Year": 2012,
+    "CO2": 184.711937
+  },
+  {
+    "Country": "Namibia",
+    "Year": 1990,
+    "CO2": 15.27652195
+  },
+  {
+    "Country": "Namibia",
+    "Year": 2001,
+    "CO2": 17.91799206
+  },
+  {
+    "Country": "Namibia",
+    "Year": 2012,
+    "CO2": 22.49023687
+  },
+  {
+    "Country": "Nauru",
+    "Year": 1990,
+    "CO2": 0.161095911
+  },
+  {
+    "Country": "Nauru",
+    "Year": 2001,
+    "CO2": 0.099710079
+  },
+  {
+    "Country": "Nauru",
+    "Year": 2012,
+    "CO2": 0.174391565
+  },
+  {
+    "Country": "Nepal",
+    "Year": 1990,
+    "CO2": 53.15125313
+  },
+  {
+    "Country": "Nepal",
+    "Year": 2001,
+    "CO2": 59.96870674
+  },
+  {
+    "Country": "Nepal",
+    "Year": 2012,
+    "CO2": 40.33761217
+  },
+  {
+    "Country": "Netherlands",
+    "Year": 1990,
+    "CO2": 211.2032317
+  },
+  {
+    "Country": "Netherlands",
+    "Year": 2001,
+    "CO2": 222.7150059
+  },
+  {
+    "Country": "Netherlands",
+    "Year": 2012,
+    "CO2": 207.5298992
+  },
+  {
+    "Country": "New Zealand",
+    "Year": 1990,
+    "CO2": 76.67930998
+  },
+  {
+    "Country": "New Zealand",
+    "Year": 2001,
+    "CO2": 56.99509254
+  },
+  {
+    "Country": "New Zealand",
+    "Year": 2012,
+    "CO2": 58.47313699
+  },
+  {
+    "Country": "Nicaragua",
+    "Year": 1990,
+    "CO2": 38.41952023
+  },
+  {
+    "Country": "Nicaragua",
+    "Year": 2001,
+    "CO2": 40.76892949
+  },
+  {
+    "Country": "Nicaragua",
+    "Year": 2012,
+    "CO2": 42.70085086
+  },
+  {
+    "Country": "Niger",
+    "Year": 1990,
+    "CO2": 18.4184173
+  },
+  {
+    "Country": "Niger",
+    "Year": 2001,
+    "CO2": 19.31209223
+  },
+  {
+    "Country": "Niger",
+    "Year": 2012,
+    "CO2": 26.09724895
+  },
+  {
+    "Country": "Nigeria",
+    "Year": 1990,
+    "CO2": 385.7586838
+  },
+  {
+    "Country": "Nigeria",
+    "Year": 2001,
+    "CO2": 439.2758197
+  },
+  {
+    "Country": "Nigeria",
+    "Year": 2012,
+    "CO2": 474.8562094
+  },
+  {
+    "Country": "Niue",
+    "Year": 1990,
+    "CO2": 0.054342369
+  },
+  {
+    "Country": "Niue",
+    "Year": 2001,
+    "CO2": 0.060915759
+  },
+  {
+    "Country": "Niue",
+    "Year": 2012,
+    "CO2": 0.087144617
+  },
+  {
+    "Country": "Norway",
+    "Year": 1990,
+    "CO2": 35.55932787
+  },
+  {
+    "Country": "Norway",
+    "Year": 2001,
+    "CO2": 25.17530507
+  },
+  {
+    "Country": "Norway",
+    "Year": 2012,
+    "CO2": 24.10374941
+  },
+  {
+    "Country": "Oman",
+    "Year": 1990,
+    "CO2": 39.81406951
+  },
+  {
+    "Country": "Oman",
+    "Year": 2001,
+    "CO2": 65.37073017
+  },
+  {
+    "Country": "Oman",
+    "Year": 2012,
+    "CO2": 109.3174241
+  },
+  {
+    "Country": "Pakistan",
+    "Year": 1990,
+    "CO2": 182.7324488
+  },
+  {
+    "Country": "Pakistan",
+    "Year": 2001,
+    "CO2": 248.4889801
+  },
+  {
+    "Country": "Pakistan",
+    "Year": 2012,
+    "CO2": 341.6455527
+  },
+  {
+    "Country": "Palau",
+    "Year": 1990,
+    "CO2": ""
+  },
+  {
+    "Country": "Palau",
+    "Year": 2001,
+    "CO2": 0.100369391
+  },
+  {
+    "Country": "Palau",
+    "Year": 2012,
+    "CO2": ""
+  },
+  {
+    "Country": "Panama",
+    "Year": 1990,
+    "CO2": 27.48870916
+  },
+  {
+    "Country": "Panama",
+    "Year": 2001,
+    "CO2": 17.69582161
+  },
+  {
+    "Country": "Panama",
+    "Year": 2012,
+    "CO2": 22.05084246
+  },
+  {
+    "Country": "Papua New Guinea",
+    "Year": 1990,
+    "CO2": 97.10767988
+  },
+  {
+    "Country": "Papua New Guinea",
+    "Year": 2001,
+    "CO2": 98.50580459
+  },
+  {
+    "Country": "Papua New Guinea",
+    "Year": 2012,
+    "CO2": 99.92147379
+  },
+  {
+    "Country": "Paraguay",
+    "Year": 1990,
+    "CO2": 92.94502083
+  },
+  {
+    "Country": "Paraguay",
+    "Year": 2001,
+    "CO2": 101.0282947
+  },
+  {
+    "Country": "Paraguay",
+    "Year": 2012,
+    "CO2": 110.9796333
+  },
+  {
+    "Country": "Peru",
+    "Year": 1990,
+    "CO2": 110.5354059
+  },
+  {
+    "Country": "Peru",
+    "Year": 2001,
+    "CO2": 103.788098
+  },
+  {
+    "Country": "Peru",
+    "Year": 2012,
+    "CO2": 159.4984521
+  },
+  {
+    "Country": "Philippines",
+    "Year": 1990,
+    "CO2": 103.300058
+  },
+  {
+    "Country": "Philippines",
+    "Year": 2001,
+    "CO2": 129.10301
+  },
+  {
+    "Country": "Philippines",
+    "Year": 2012,
+    "CO2": 157.5930717
+  },
+  {
+    "Country": "Poland",
+    "Year": 1990,
+    "CO2": 401.9777634
+  },
+  {
+    "Country": "Poland",
+    "Year": 2001,
+    "CO2": 317.3193306
+  },
+  {
+    "Country": "Poland",
+    "Year": 2012,
+    "CO2": 322.0662265
+  },
+  {
+    "Country": "Portugal",
+    "Year": 1990,
+    "CO2": 59.5062785
+  },
+  {
+    "Country": "Portugal",
+    "Year": 2001,
+    "CO2": 80.11005736
+  },
+  {
+    "Country": "Portugal",
+    "Year": 2012,
+    "CO2": 68.47807696
+  },
+  {
+    "Country": "Qatar",
+    "Year": 1990,
+    "CO2": 16.01183839
+  },
+  {
+    "Country": "Qatar",
+    "Year": 2001,
+    "CO2": 29.2346461
+  },
+  {
+    "Country": "Qatar",
+    "Year": 2012,
+    "CO2": 85.25467649
+  },
+  {
+    "Country": "Romania",
+    "Year": 1990,
+    "CO2": 238.8214184
+  },
+  {
+    "Country": "Romania",
+    "Year": 2001,
+    "CO2": 134.3611673
+  },
+  {
+    "Country": "Romania",
+    "Year": 2012,
+    "CO2": 108.6717637
+  },
+  {
+    "Country": "Russian Federation",
+    "Year": 1990,
+    "CO2": 2776.775728
+  },
+  {
+    "Country": "Russian Federation",
+    "Year": 2001,
+    "CO2": 2108.719909
+  },
+  {
+    "Country": "Russian Federation",
+    "Year": 2012,
+    "CO2": 2254.472651
+  },
+  {
+    "Country": "Rwanda",
+    "Year": 1990,
+    "CO2": 13.95736137
+  },
+  {
+    "Country": "Rwanda",
+    "Year": 2001,
+    "CO2": -3.982325913
+  },
+  {
+    "Country": "Rwanda",
+    "Year": 2012,
+    "CO2": 5.721836606
+  },
+  {
+    "Country": "Saint Kitts & Nevis",
+    "Year": 1990,
+    "CO2": 0.101708021
+  },
+  {
+    "Country": "Saint Kitts & Nevis",
+    "Year": 2001,
+    "CO2": 0.245483935
+  },
+  {
+    "Country": "Saint Kitts & Nevis",
+    "Year": 2012,
+    "CO2": 0.339280825
+  },
+  {
+    "Country": "Saint Lucia",
+    "Year": 1990,
+    "CO2": 0.681891001
+  },
+  {
+    "Country": "Saint Lucia",
+    "Year": 2001,
+    "CO2": 0.972633981
+  },
+  {
+    "Country": "Saint Lucia",
+    "Year": 2012,
+    "CO2": 1.143858794
+  },
+  {
+    "Country": "Saint Vincent & Grenadines",
+    "Year": 1990,
+    "CO2": 0.088698739
+  },
+  {
+    "Country": "Saint Vincent & Grenadines",
+    "Year": 2001,
+    "CO2": 0.203805576
+  },
+  {
+    "Country": "Saint Vincent & Grenadines",
+    "Year": 2012,
+    "CO2": 0.315076726
+  },
+  {
+    "Country": "Samoa",
+    "Year": 1990,
+    "CO2": 0.365448449
+  },
+  {
+    "Country": "Samoa",
+    "Year": 2001,
+    "CO2": 0.430104903
+  },
+  {
+    "Country": "Samoa",
+    "Year": 2012,
+    "CO2": 0.380715784
+  },
+  {
+    "Country": "Sao Tome & Principe",
+    "Year": 1990,
+    "CO2": 0.09406085
+  },
+  {
+    "Country": "Sao Tome & Principe",
+    "Year": 2001,
+    "CO2": 0.111685085
+  },
+  {
+    "Country": "Sao Tome & Principe",
+    "Year": 2012,
+    "CO2": 0.210871537
+  },
+  {
+    "Country": "Saudi Arabia",
+    "Year": 1990,
+    "CO2": 187.5249114
+  },
+  {
+    "Country": "Saudi Arabia",
+    "Year": 2001,
+    "CO2": 286.6014551
+  },
+  {
+    "Country": "Saudi Arabia",
+    "Year": 2012,
+    "CO2": 526.9670349
+  },
+  {
+    "Country": "Senegal",
+    "Year": 1990,
+    "CO2": 23.32390289
+  },
+  {
+    "Country": "Senegal",
+    "Year": 2001,
+    "CO2": 27.39970647
+  },
+  {
+    "Country": "Senegal",
+    "Year": 2012,
+    "CO2": 28.11860426
+  },
+  {
+    "Country": "Serbia",
+    "Year": 1990,
+    "CO2": 69.16737102
+  },
+  {
+    "Country": "Serbia",
+    "Year": 2001,
+    "CO2": 52.45698733
+  },
+  {
+    "Country": "Serbia",
+    "Year": 2012,
+    "CO2": -19.00752013
+  },
+  {
+    "Country": "Seychelles",
+    "Year": 1990,
+    "CO2": 0.172345689
+  },
+  {
+    "Country": "Seychelles",
+    "Year": 2001,
+    "CO2": 0.698733362
+  },
+  {
+    "Country": "Seychelles",
+    "Year": 2012,
+    "CO2": 1.37143584
+  },
+  {
+    "Country": "Sierra Leone",
+    "Year": 1990,
+    "CO2": 9.617079975
+  },
+  {
+    "Country": "Sierra Leone",
+    "Year": 2001,
+    "CO2": 9.376794464
+  },
+  {
+    "Country": "Sierra Leone",
+    "Year": 2012,
+    "CO2": 13.01684483
+  },
+  {
+    "Country": "Singapore",
+    "Year": 1990,
+    "CO2": 32.27498535
+  },
+  {
+    "Country": "Singapore",
+    "Year": 2001,
+    "CO2": 48.96865566
+  },
+  {
+    "Country": "Singapore",
+    "Year": 2012,
+    "CO2": 56.12602175
+  },
+  {
+    "Country": "Slovakia",
+    "Year": 1990,
+    "CO2": 62.83096348
+  },
+  {
+    "Country": "Slovakia",
+    "Year": 2001,
+    "CO2": 38.52361504
+  },
+  {
+    "Country": "Slovakia",
+    "Year": 2012,
+    "CO2": 33.82495399
+  },
+  {
+    "Country": "Slovenia",
+    "Year": 1990,
+    "CO2": 15.63640322
+  },
+  {
+    "Country": "Slovenia",
+    "Year": 2001,
+    "CO2": 5.279993489
+  },
+  {
+    "Country": "Slovenia",
+    "Year": 2012,
+    "CO2": 3.638467177
+  },
+  {
+    "Country": "Solomon Islands",
+    "Year": 1990,
+    "CO2": 2.046729135
+  },
+  {
+    "Country": "Solomon Islands",
+    "Year": 2001,
+    "CO2": 2.053725711
+  },
+  {
+    "Country": "Solomon Islands",
+    "Year": 2012,
+    "CO2": 2.306210459
+  },
+  {
+    "Country": "South Africa",
+    "Year": 1990,
+    "CO2": 321.7320793
+  },
+  {
+    "Country": "South Africa",
+    "Year": 2001,
+    "CO2": 356.6245539
+  },
+  {
+    "Country": "South Africa",
+    "Year": 2012,
+    "CO2": 463.7507068
+  },
+  {
+    "Country": "Spain",
+    "Year": 1990,
+    "CO2": 263.2186167
+  },
+  {
+    "Country": "Spain",
+    "Year": 2001,
+    "CO2": 373.3203912
+  },
+  {
+    "Country": "Spain",
+    "Year": 2012,
+    "CO2": 323.4845923
+  },
+  {
+    "Country": "Sri Lanka",
+    "Year": 1990,
+    "CO2": 31.54426958
+  },
+  {
+    "Country": "Sri Lanka",
+    "Year": 2001,
+    "CO2": 39.68588228
+  },
+  {
+    "Country": "Sri Lanka",
+    "Year": 2012,
+    "CO2": 45.20908042
+  },
+  {
+    "Country": "Sudan",
+    "Year": 1990,
+    "CO2": 143.9900714
+  },
+  {
+    "Country": "Sudan",
+    "Year": 2001,
+    "CO2": 135.8623762
+  },
+  {
+    "Country": "Sudan",
+    "Year": 2012,
+    "CO2": 177.3541698
+  },
+  {
+    "Country": "Suriname",
+    "Year": 1990,
+    "CO2": 5.093192325
+  },
+  {
+    "Country": "Suriname",
+    "Year": 2001,
+    "CO2": 5.519324787
+  },
+  {
+    "Country": "Suriname",
+    "Year": 2012,
+    "CO2": 8.630397164
+  },
+  {
+    "Country": "Swaziland",
+    "Year": 1990,
+    "CO2": 3.039467889
+  },
+  {
+    "Country": "Swaziland",
+    "Year": 2001,
+    "CO2": 2.795506904
+  },
+  {
+    "Country": "Swaziland",
+    "Year": 2012,
+    "CO2": 2.852816591
+  },
+  {
+    "Country": "Sweden",
+    "Year": 1990,
+    "CO2": 90.26117794
+  },
+  {
+    "Country": "Sweden",
+    "Year": 2001,
+    "CO2": 44.46887238
+  },
+  {
+    "Country": "Sweden",
+    "Year": 2012,
+    "CO2": 31.22582533
+  },
+  {
+    "Country": "Switzerland",
+    "Year": 1990,
+    "CO2": 51.36041214
+  },
+  {
+    "Country": "Switzerland",
+    "Year": 2001,
+    "CO2": 50.25142236
+  },
+  {
+    "Country": "Switzerland",
+    "Year": 2012,
+    "CO2": 48.07147235
+  },
+  {
+    "Country": "Syria",
+    "Year": 1990,
+    "CO2": 54.82567556
+  },
+  {
+    "Country": "Syria",
+    "Year": 2001,
+    "CO2": 73.96832528
+  },
+  {
+    "Country": "Syria",
+    "Year": 2012,
+    "CO2": 72.49979347
+  },
+  {
+    "Country": "Tajikistan",
+    "Year": 1990,
+    "CO2": 12.84983279
+  },
+  {
+    "Country": "Tajikistan",
+    "Year": 2001,
+    "CO2": 6.039178647
+  },
+  {
+    "Country": "Tajikistan",
+    "Year": 2012,
+    "CO2": 9.091923476
+  },
+  {
+    "Country": "Tanzania",
+    "Year": 1990,
+    "CO2": 146.4320285
+  },
+  {
+    "Country": "Tanzania",
+    "Year": 2001,
+    "CO2": 157.0048682
+  },
+  {
+    "Country": "Tanzania",
+    "Year": 2012,
+    "CO2": 171.7266747
+  },
+  {
+    "Country": "Thailand",
+    "Year": 1990,
+    "CO2": 171.4056687
+  },
+  {
+    "Country": "Thailand",
+    "Year": 2001,
+    "CO2": 261.1364337
+  },
+  {
+    "Country": "Thailand",
+    "Year": 2012,
+    "CO2": 375.7071781
+  },
+  {
+    "Country": "Togo",
+    "Year": 1990,
+    "CO2": 12.52862632
+  },
+  {
+    "Country": "Togo",
+    "Year": 2001,
+    "CO2": 13.04994292
+  },
+  {
+    "Country": "Togo",
+    "Year": 2012,
+    "CO2": 5.80014736
+  },
+  {
+    "Country": "Tonga",
+    "Year": 1990,
+    "CO2": 0.227562613
+  },
+  {
+    "Country": "Tonga",
+    "Year": 2001,
+    "CO2": 0.250969304
+  },
+  {
+    "Country": "Tonga",
+    "Year": 2012,
+    "CO2": 0.392725191
+  },
+  {
+    "Country": "Trinidad & Tobago",
+    "Year": 1990,
+    "CO2": 18.84456679
+  },
+  {
+    "Country": "Trinidad & Tobago",
+    "Year": 2001,
+    "CO2": 26.25817123
+  },
+  {
+    "Country": "Trinidad & Tobago",
+    "Year": 2012,
+    "CO2": 40.40239459
+  },
+  {
+    "Country": "Tunisia",
+    "Year": 1990,
+    "CO2": 19.30112679
+  },
+  {
+    "Country": "Tunisia",
+    "Year": 2001,
+    "CO2": 28.60106179
+  },
+  {
+    "Country": "Tunisia",
+    "Year": 2012,
+    "CO2": 30.69721415
+  },
+  {
+    "Country": "Turkey",
+    "Year": 1990,
+    "CO2": 197.5833118
+  },
+  {
+    "Country": "Turkey",
+    "Year": 2001,
+    "CO2": 252.3849451
+  },
+  {
+    "Country": "Turkey",
+    "Year": 2012,
+    "CO2": 390.8648428
+  },
+  {
+    "Country": "Turkmenistan",
+    "Year": 1990,
+    "CO2": 66.50050078
+  },
+  {
+    "Country": "Turkmenistan",
+    "Year": 2001,
+    "CO2": 68.00377501
+  },
+  {
+    "Country": "Turkmenistan",
+    "Year": 2012,
+    "CO2": 108.3202258
+  },
+  {
+    "Country": "Uganda",
+    "Year": 1990,
+    "CO2": 32.98674692
+  },
+  {
+    "Country": "Uganda",
+    "Year": 2001,
+    "CO2": 36.45537632
+  },
+  {
+    "Country": "Uganda",
+    "Year": 2012,
+    "CO2": 49.42583411
+  },
+  {
+    "Country": "Ukraine",
+    "Year": 1990,
+    "CO2": 809.5120126
+  },
+  {
+    "Country": "Ukraine",
+    "Year": 2001,
+    "CO2": 380.119113
+  },
+  {
+    "Country": "Ukraine",
+    "Year": 2012,
+    "CO2": 366.3096835
+  },
+  {
+    "Country": "United Arab Emirates",
+    "Year": 1990,
+    "CO2": 74.62854308
+  },
+  {
+    "Country": "United Arab Emirates",
+    "Year": 2001,
+    "CO2": 115.992575
+  },
+  {
+    "Country": "United Arab Emirates",
+    "Year": 2012,
+    "CO2": 216.0427469
+  },
+  {
+    "Country": "United Kingdom",
+    "Year": 1990,
+    "CO2": 745.9895016
+  },
+  {
+    "Country": "United Kingdom",
+    "Year": 2001,
+    "CO2": 654.616908
+  },
+  {
+    "Country": "United Kingdom",
+    "Year": 2012,
+    "CO2": 550.6643442
+  },
+  {
+    "Country": "United States",
+    "Year": 1990,
+    "CO2": 5743.982575
+  },
+  {
+    "Country": "United States",
+    "Year": 2001,
+    "CO2": 6380.789478
+  },
+  {
+    "Country": "United States",
+    "Year": 2012,
+    "CO2": 5822.870399
+  },
+  {
+    "Country": "Uruguay",
+    "Year": 1990,
+    "CO2": 26.03747382
+  },
+  {
+    "Country": "Uruguay",
+    "Year": 2001,
+    "CO2": 19.82016203
+  },
+  {
+    "Country": "Uruguay",
+    "Year": 2012,
+    "CO2": 14.75941027
+  },
+  {
+    "Country": "Uzbekistan",
+    "Year": 1990,
+    "CO2": 177.0285763
+  },
+  {
+    "Country": "Uzbekistan",
+    "Year": 2001,
+    "CO2": 212.5741618
+  },
+  {
+    "Country": "Uzbekistan",
+    "Year": 2012,
+    "CO2": 237.7777428
+  },
+  {
+    "Country": "Vanuatu",
+    "Year": 1990,
+    "CO2": 0.543806526
+  },
+  {
+    "Country": "Vanuatu",
+    "Year": 2001,
+    "CO2": 0.54466835
+  },
+  {
+    "Country": "Vanuatu",
+    "Year": 2012,
+    "CO2": 0.597202689
+  },
+  {
+    "Country": "Venezuela",
+    "Year": 1990,
+    "CO2": 293.5557003
+  },
+  {
+    "Country": "Venezuela",
+    "Year": 2001,
+    "CO2": 344.3601949
+  },
+  {
+    "Country": "Venezuela",
+    "Year": 2012,
+    "CO2": 396.7376293
+  },
+  {
+    "Country": "Vietnam",
+    "Year": 1990,
+    "CO2": 93.09593912
+  },
+  {
+    "Country": "Vietnam",
+    "Year": 2001,
+    "CO2": 114.4404437
+  },
+  {
+    "Country": "Vietnam",
+    "Year": 2012,
+    "CO2": 251.1827347
+  },
+  {
+    "Country": "Yemen",
+    "Year": 1990,
+    "CO2": 12.11775463
+  },
+  {
+    "Country": "Yemen",
+    "Year": 2001,
+    "CO2": 21.96843001
+  },
+  {
+    "Country": "Yemen",
+    "Year": 2012,
+    "CO2": 29.8396146
+  },
+  {
+    "Country": "Zambia",
+    "Year": 1990,
+    "CO2": 116.2613977
+  },
+  {
+    "Country": "Zambia",
+    "Year": 2001,
+    "CO2": 108.9638041
+  },
+  {
+    "Country": "Zambia",
+    "Year": 2012,
+    "CO2": 119.8056213
+  },
+  {
+    "Country": "Zimbabwe",
+    "Year": 1990,
+    "CO2": 70.69649908
+  },
+  {
+    "Country": "Zimbabwe",
+    "Year": 2001,
+    "CO2": 68.25351689
+  },
+  {
+    "Country": "Zimbabwe",
+    "Year": 2012,
+    "CO2": 62.9284283
+  },
+  {
+    "Country": "World",
+    "Year": 1990,
+    "CO2": 33937.21432
+  },
+  {
+    "Country": "World",
+    "Year": 2001,
+    "CO2": 37366.03728
+  },
+  {
+    "Country": "World",
+    "Year": 2012,
+    "CO2": 47598.55416
+  },
+  {
+    "Country": "European Union (15)",
+    "Year": 1990,
+    "CO2": 3936.0465
+  },
+  {
+    "Country": "European Union (15)",
+    "Year": 2001,
+    "CO2": 3783.388129
+  },
+  {
+    "Country": "European Union (15)",
+    "Year": 2012,
+    "CO2": 3354.177372
+  },
+  {
+    "Country": "European Union (28)",
+    "Year": 1990,
+    "CO2": 5138.521424
+  },
+  {
+    "Country": "European Union (28)",
+    "Year": 2001,
+    "CO2": 4617.295991
+  },
+  {
+    "Country": "European Union (28)",
+    "Year": 2012,
+    "CO2": 4122.64041
+  }
+]

@@ -1,0 +1,8 @@
+#cesiumContainer {
+  width: 95%;
+  height: 80% ;
+  overflow: hidden;
+  }
+  #content{
+  border-collapse: collapse;
+}

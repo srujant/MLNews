@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/chart.min.js"></script>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+<head>
+    <title>Charts</title>
+</head>
+<head>
+    <title></title>
+</head>
+<nav class="navbar navbar-dark bg-inverse">
+      <a class="navbar-brand" href="#">The Kyoto Protocol</a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cesium.html">Globe Visualization</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Chart Visualization</a>
+        </li>
+      </ul>
+    </nav>
+    <h3>Enter a (valid) country name</h3>
+    <p>You get it's protocol signing date and its CO2 per capita output before and after the protocol.</p>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for..." id="search">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" onclick="getData();">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+<body>
+<div id="parent">
+<h1 id="countryName"></h1>
+<p id="signingInfo"></p>
+<div id="parent">
+<canvas id="chart" width="10%" height="10%"></canvas>
+</div>
+<script>
+function getData(){
+    var request = new XMLHttpRequest();
+    request.open('GET', 'Data/kyoto.json', false);  // `false` makes the request synchronous
+    request.send(null);
+    var data;
+    if (request.status === 200) {
+      data = request.responseText;
+    }
+    var country = document.getElementById("search").value;
+    var obj = JSON.parse(data);
+    var year = -1;
+    for(var i = 0; i < obj.length; i++){
+        if(obj[i].Country == country){
+            year = obj[i].Year;
+        }
+    }
+    var request = new XMLHttpRequest();
+    request.open('GET', 'Data/CO2.json', false);  // `false` makes the request synchronous
+    request.send(null);
+    var data;
+    if (request.status === 200) {
+      data = request.responseText;
+    }
+    var startCO2 = 0;
+    var endCO2 = 0;
+    var startYear = 0;
+    var endYear = 0;
+    var obj = JSON.parse(data);
+     for(var i = 0; i < obj.length; i++){
+        if(obj[i].Country == country){
+            if(year <= 2000 && obj[i].Year == 1990){
+                startCO2 = obj[i].CO2;
+                startYear = 1990;
+            }
+            if(year <= 2000 && obj[i].Year == 2001){
+                endCO2 = obj[i].CO2;
+                endYear = 2001;
+            }
+            if(year > 2000 && obj[i].Year == 2001){
+                startCO2 = obj[i].CO2;
+                startYear = 2001;
+            }
+            if(year > 2000 && obj[i].Year == 2012){
+                endCO2 = obj[i].CO2;
+                endYear = 2012;
+            }
+        }
+    }
+document.getElementById("countryName").innerHTML = country;
+document.getElementById("signingInfo").innerHTML = "Signed the protocol in " + year;
+$('#chart').remove(); // this is my <canvas> element
+  $('#parent').append('<canvas id="chart" width="10%" height="10%"></canvas>');
+var ctx = document.getElementById("chart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["(" + startYear + ") Starting CO2 (before Kyoto)", "(" + endYear + ") Ending CO2 (after Kyoto)"],
+        datasets: [{
+            label: 'CO2 (metric tons) per capita',
+            data: [startCO2, endCO2],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+}
+</script>
+   <script>
+   $(document).ready(function(){
+    $('#kyotoData').DataTable();
+});
+    </script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    </div>
+  </body>
+</html>

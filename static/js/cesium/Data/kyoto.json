@@ -1,0 +1,662 @@
+[
+ {
+   "Country": "Albania",
+   "Year": 2005
+ },
+ {
+   "Country": "Algeria",
+   "Year": 2005
+ },
+ {
+   "Country": "Antigua and Barbuda",
+   "Year": 1998
+ },
+ {
+   "Country": "Argentina",
+   "Year": 2001
+ },
+ {
+   "Country": "Armenia",
+   "Year": 2003
+ },
+ {
+   "Country": "Australia",
+   "Year": 1998
+ },
+ {
+   "Country": "Austria",
+   "Year": 2002
+ },
+ {
+   "Country": "Azerbaijan",
+   "Year": 2000
+ },
+ {
+   "Country": "Bahamas",
+   "Year": 1999
+ },
+ {
+   "Country": "Bahrain",
+   "Year": 2006
+ },
+ {
+   "Country": "Bangladesh",
+   "Year": 2001
+ },
+ {
+   "Country": "Barbados",
+   "Year": 2000
+ },
+ {
+   "Country": "Belarus",
+   "Year": 2005
+ },
+ {
+   "Country": "Belgium",
+   "Year": 2002
+ },
+ {
+   "Country": "Belize",
+   "Year": 2003
+ },
+ {
+   "Country": "Benin",
+   "Year": 2002
+ },
+ {
+   "Country": "Bhutan",
+   "Year": 2002
+ },
+ {
+   "Country": "Bolivia",
+   "Year": 1999
+ },
+ {
+   "Country": "Botswana",
+   "Year": 2003
+ },
+ {
+   "Country": "Brazil",
+   "Year": 2002
+ },
+ {
+   "Country": "Bulgaria",
+   "Year": 2002
+ },
+ {
+   "Country": "Burkina Faso",
+   "Year": 2005
+ },
+ {
+   "Country": "Burundi",
+   "Year": 2001
+ },
+ {
+   "Country": "Cambodia",
+   "Year": 2002
+ },
+ {
+   "Country": "Cameroon",
+   "Year": 2002
+ },
+ {
+   "Country": "Canada",
+   "Year": 2002
+ },
+ {
+   "Country": "Cape Verde",
+   "Year": 2006
+ },
+ {
+   "Country": "Chile",
+   "Year": 2002
+ },
+ {
+   "Country": "China",
+   "Year": 2002
+ },
+ {
+   "Country": "Colombia",
+   "Year": 2001
+ },
+ {
+   "Country": "Congo, Dem Rep",
+   "Year": 2005
+ },
+ {
+   "Country": "Cook Islands",
+   "Year": 2001
+ },
+ {
+   "Country": "Costa Rica",
+   "Year": 2002
+ },
+ {
+   "Country": "Croatia",
+   "Year": 1999
+ },
+ {
+   "Country": "Cuba",
+   "Year": 2002
+ },
+ {
+   "Country": "Cyprus",
+   "Year": 1999
+ },
+ {
+   "Country": "Czech Rep",
+   "Year": 2001
+ },
+ {
+   "Country": "Denmark",
+   "Year": 2002
+ },
+ {
+   "Country": "Djibouti",
+   "Year": 2002
+ },
+ {
+   "Country": "Dominica",
+   "Year": 2005
+ },
+ {
+   "Country": "Dominican Rep",
+   "Year": 2002
+ },
+ {
+   "Country": "Ecuador",
+   "Year": 2000
+ },
+ {
+   "Country": "Egypt",
+   "Year": 2005
+ },
+ {
+   "Country": "El Salvador",
+   "Year": 1998
+ },
+ {
+   "Country": "Equatorial Guinea",
+   "Year": 2000
+ },
+ {
+   "Country": "Eritrea",
+   "Year": 2005
+ },
+ {
+   "Country": "Estonia",
+   "Year": 2002
+ },
+ {
+   "Country": "Ethiopia",
+   "Year": 2005
+ },
+ {
+   "Country": "Fiji",
+   "Year": 1998
+ },
+ {
+   "Country": "Finland",
+   "Year": 2002
+ },
+ {
+   "Country": "France",
+   "Year": 2002
+ },
+ {
+   "Country": "Gambia",
+   "Year": 2001
+ },
+ {
+   "Country": "Georgia",
+   "Year": 1999
+ },
+ {
+   "Country": "Germany",
+   "Year": 2002
+ },
+ {
+   "Country": "Ghana",
+   "Year": 2003
+ },
+ {
+   "Country": "Greece",
+   "Year": 2002
+ },
+ {
+   "Country": "Grenada",
+   "Year": 2002
+ },
+ {
+   "Country": "Guatemala",
+   "Year": 1999
+ },
+ {
+   "Country": "Guinea",
+   "Year": 2000
+ },
+ {
+   "Country": "Guinea-Bissau",
+   "Year": 2005
+ },
+ {
+   "Country": "Guyana",
+   "Year": 2003
+ },
+ {
+   "Country": "Haiti",
+   "Year": 2005
+ },
+ {
+   "Country": "Honduras",
+   "Year": 2000
+ },
+ {
+   "Country": "Hungary",
+   "Year": 2002
+ },
+ {
+   "Country": "Iceland",
+   "Year": 2002
+ },
+ {
+   "Country": "India",
+   "Year": 2002
+ },
+ {
+   "Country": "Indonesia",
+   "Year": 2004
+ },
+ {
+   "Country": "Iran, Islamic Rep",
+   "Year": 2005
+ },
+ {
+   "Country": "Ireland",
+   "Year": 2002
+ },
+ {
+   "Country": "Israel",
+   "Year": 2004
+ },
+ {
+   "Country": "Italy",
+   "Year": 2002
+ },
+ {
+   "Country": "Jamaica",
+   "Year": 1999
+ },
+ {
+   "Country": "Japan",
+   "Year": 2002
+ },
+ {
+   "Country": "Jordan",
+   "Year": 2003
+ },
+ {
+   "Country": "Kazakhstan",
+   "Year": 1999
+ },
+ {
+   "Country": "Kenya",
+   "Year": 2005
+ },
+ {
+   "Country": "Kiribati",
+   "Year": 2000
+ },
+ {
+   "Country": "Korea, Dem People's Rep",
+   "Year": 2005
+ },
+ {
+   "Country": "Korea, Rep",
+   "Year": 2002
+ },
+ {
+   "Country": "Kuwait",
+   "Year": 2005
+ },
+ {
+   "Country": "Kyrgyzstan",
+   "Year": 2003
+ },
+ {
+   "Country": "Lao People's Dem Rep",
+   "Year": 2003
+ },
+ {
+   "Country": "Latvia",
+   "Year": 2002
+ },
+ {
+   "Country": "Lesotho",
+   "Year": 2000
+ },
+ {
+   "Country": "Liberia",
+   "Year": 2002
+ },
+ {
+   "Country": "Liechtenstein",
+   "Year": 2004
+ },
+ {
+   "Country": "Lithuania",
+   "Year": 2003
+ },
+ {
+   "Country": "Luxembourg",
+   "Year": 2002
+ },
+ {
+   "Country": "Macedonia, FYR",
+   "Year": 2004
+ },
+ {
+   "Country": "Madagascar",
+   "Year": 2003
+ },
+ {
+   "Country": "Malawi",
+   "Year": 2001
+ },
+ {
+   "Country": "Malaysia",
+   "Year": 2002
+ },
+ {
+   "Country": "Maldives",
+   "Year": 1998
+ },
+ {
+   "Country": "Mali",
+   "Year": 2002
+ },
+ {
+   "Country": "Malta",
+   "Year": 2001
+ },
+ {
+   "Country": "Marshall Islands",
+   "Year": 2003
+ },
+ {
+   "Country": "Mauritania",
+   "Year": 2005
+ },
+ {
+   "Country": "Mauritius",
+   "Year": 2001
+ },
+ {
+   "Country": "Mexico",
+   "Year": 2000
+ },
+ {
+   "Country": "Micronesia, Fed States",
+   "Year": 1999
+ },
+ {
+   "Country": "Moldova, Rep",
+   "Year": 2003
+ },
+ {
+   "Country": "Monaco",
+   "Year": 2006
+ },
+ {
+   "Country": "Mongolia",
+   "Year": 1999
+ },
+ {
+   "Country": "Morocco",
+   "Year": 2002
+ },
+ {
+   "Country": "Mozambique",
+   "Year": 2005
+ },
+ {
+   "Country": "Myanmar",
+   "Year": 2003
+ },
+ {
+   "Country": "Namibia",
+   "Year": 2003
+ },
+ {
+   "Country": "Nauru",
+   "Year": 2001
+ },
+ {
+   "Country": "Nepal",
+   "Year": 2005
+ },
+ {
+   "Country": "Netherlands",
+   "Year": 2002
+ },
+ {
+   "Country": "New Zealand",
+   "Year": 2002
+ },
+ {
+   "Country": "Nicaragua",
+   "Year": 1999
+ },
+ {
+   "Country": "Niger",
+   "Year": 2004
+ },
+ {
+   "Country": "Niue",
+   "Year": 1999
+ },
+ {
+   "Country": "Norway",
+   "Year": 2002
+ },
+ {
+   "Country": "Oman",
+   "Year": 2005
+ },
+ {
+   "Country": "Pakistan",
+   "Year": 2005
+ },
+ {
+   "Country": "Palau",
+   "Year": 1999
+ },
+ {
+   "Country": "Panama",
+   "Year": 1999
+ },
+ {
+   "Country": "Papua New Guinea",
+   "Year": 2002
+ },
+ {
+   "Country": "Paraguay",
+   "Year": 1999
+ },
+ {
+   "Country": "Peru",
+   "Year": 2002
+ },
+ {
+   "Country": "Philippines",
+   "Year": 2003
+ },
+ {
+   "Country": "Poland",
+   "Year": 2002
+ },
+ {
+   "Country": "Portugal",
+   "Year": 2002
+ },
+ {
+   "Country": "Qatar",
+   "Year": 2005
+ },
+ {
+   "Country": "Romania",
+   "Year": 2001
+ },
+ {
+   "Country": "Russian Federation",
+   "Year": 2004
+ },
+ {
+   "Country": "Rwanda",
+   "Year": 2004
+ },
+ {
+   "Country": "Samoa",
+   "Year": 2000
+ },
+ {
+   "Country": "Saudi Arabia",
+   "Year": 2005
+ },
+ {
+   "Country": "Senegal",
+   "Year": 2001
+ },
+ {
+   "Country": "Seychelles",
+   "Year": 2002
+ },
+ {
+   "Country": "Singapore",
+   "Year": 2006
+ },
+ {
+   "Country": "Slovakia",
+   "Year": 2002
+ },
+ {
+   "Country": "Slovenia",
+   "Year": 2002
+ },
+ {
+   "Country": "Solomon Islands",
+   "Year": 2003
+ },
+ {
+   "Country": "South Africa",
+   "Year": 2002
+ },
+ {
+   "Country": "Spain",
+   "Year": 2002
+ },
+ {
+   "Country": "Sri Lanka",
+   "Year": 2002
+ },
+ {
+   "Country": "St. Lucia",
+   "Year": 2003
+ },
+ {
+   "Country": "St. Vincent & Grenadines",
+   "Year": 2004
+ },
+ {
+   "Country": "Sudan",
+   "Year": 2004
+ },
+ {
+   "Country": "Swaziland",
+   "Year": 2006
+ },
+ {
+   "Country": "Sweden",
+   "Year": 2002
+ },
+ {
+   "Country": "Switzerland",
+   "Year": 2003
+ },
+ {
+   "Country": "Syrian Arab Rep",
+   "Year": 2006
+ },
+ {
+   "Country": "Tanzania",
+   "Year": 2002
+ },
+ {
+   "Country": "Thailand",
+   "Year": 2002
+ },
+ {
+   "Country": "Togo",
+   "Year": 2004
+ },
+ {
+   "Country": "Trinidad and Tobago",
+   "Year": 1999
+ },
+ {
+   "Country": "Tunisia",
+   "Year": 2003
+ },
+ {
+   "Country": "Turkmenistan",
+   "Year": 1999
+ },
+ {
+   "Country": "Uganda",
+   "Year": 2002
+ },
+ {
+   "Country": "Ukraine",
+   "Year": 2004
+ },
+ {
+   "Country": "United Arab Emirates",
+   "Year": 2005
+ },
+ {
+   "Country": "United Kingdom",
+   "Year": 2002
+ },
+ {
+   "Country": "United States",
+   "Year": 1998
+ },
+ {
+   "Country": "Uruguay",
+   "Year": 2001
+ },
+ {
+   "Country": "Uzbekistan",
+   "Year": 1999
+ },
+ {
+   "Country": "Vanuatu",
+   "Year": 2001
+ },
+ {
+   "Country": "Venezuela",
+   "Year": 2005
+ },
+ {
+   "Country": "Viet Nam",
+   "Year": 2002
+ },
+ {
+   "Country": "Yemen",
+   "Year": 2004
+ },
+ {
+   "Country": "Zambia",
+   "Year": 2006
+ }
+]

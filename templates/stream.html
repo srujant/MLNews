@@ -1,0 +1,20 @@
+<script src="Build/Cesium/Cesium.js"></script>
+<html>
+
+	<title>BiPartisan | Stream</title>
+    
+    {% include 'head.html' %}
+
+	<body>
+		<script src="{{ url_for('static', filename='js/stream.js') }}"></script>
+		
+        {% include 'navbar.html' %}
+
+	    <div class="container">
+	       
+	       <div id="cesiumContainer" ></div>
+	    </div>
+	    
+	</body>
+
+</html>

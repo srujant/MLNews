@@ -3,7 +3,6 @@ body {
     background: -webkit-linear-gradient(to left, #2196f3 , #f44336); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #2196f3 , #f44336); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'Rubik', sans-serif !important;
-    
 }
 
 .logo {
@@ -14,4 +13,18 @@ body {
 nav {
     border: 0 !important;
     border-radius: 0px !important;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+
+.navbar-brand > img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+
+button {
+    outline: none !important;
 }

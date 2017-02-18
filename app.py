@@ -14,6 +14,13 @@ app = Flask(__name__)
 def main():
     return render_template('index.html')
 
+@app.route('/stream')
+def stream():
+    return render_template('stream.html')
+
+@app.route('/bias')
+def bias():
+    return render_template('beta.html')
 
 app.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8080)))
 
