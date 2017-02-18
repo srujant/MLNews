@@ -83,18 +83,40 @@ def getNGrams(text):
     return ngrams
 
 
-def HTMLParser(url):
+def HTMLParser(url , description):
     response = get(url)
     extractor = Goose()
     article = extractor.extract(raw_html=response.content)
     text = article.cleaned_text
 
-    return getLocations(text)
+    results = getLocations(description)
+    for location in getLocations(text):
+        results.append(location)
+
+    return results
 
 
 def sentiment(textbody):
+    neg = 0.0
+    pos = 0.0
+    neu = 0.0
+    compound = 0.0
+    total = 0 
+
+    sentences = nlp(unicode(textbody))
+
     sith = SentimentIntensityAnalyzer()
-    score = sith.polarity_scores(textbody)
-    print(score)
 
+    for sentence in sentences.sents:
+        score = sith.polarity_scores(sentence.text)
+        neg += score['neg']
+        neu += score['neu']
+        pos += score['pos']
+        compound += score['compound']
+        total+=1
 
+    results = []
+    results.append(neg / total)
+    results.append(pos / total)
+    results.append(neu / total)
+    results.append(compound / total)
