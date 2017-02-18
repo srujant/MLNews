@@ -8,6 +8,8 @@ import NLProcessor as nlp
 from firebase import firebase
 from pymongo import MongoClient
 import otherAPIs as api
+from ml import svm
+import sys
 
 client = MongoClient()
 client = MongoClient("mongodb://hophacks-bipartisan-rachitag22.c9users.io:27017")
@@ -40,7 +42,6 @@ def getNewsAPI():
 					locations = nlp.HTMLParser(url)
 					for z in range(0, len(locations)):
 						location = str(getAddress(str(locations[z])))
-						print location
 						if location not in aggregatedDict:
 							aggregatedDict[location] = []
 						listInfo = aggregatedDict[location]
@@ -48,11 +49,11 @@ def getNewsAPI():
 						tempDict['url'] = url
 						tempDict['author'] = author
 						tempDict['title'] = title
-						tempDict['credRating'] = credRating
+						tempDict['credRating'] = svm.compute(url)
 						tempDict['topic'] = topic
+						print tempDict
 						listInfo.append(tempDict)
 						aggregatedDict[location] = listInfo
-						pprint.pprint(aggregatedDict)
 				except:
 					None
 def addToDict():
@@ -63,14 +64,15 @@ def addToDict():
 				try:
 					locations = nlp.HTMLParser(masterList[x][y][1])
 					for z in range(0, len(locations)):
-						if locations[z] not in aggregatedDict:
-							aggregatedDict[locations[z]] = []
-						listInfo = aggregatedDict[locations[z]]
+						location = str(getAddress(str(locations[z])))
+						if location not in aggregatedDict:
+							aggregatedDict[location] = []
+						listInfo = aggregatedDict[location]
 						tempDict = {}
 						tempDict['url'] = masterList[x][y][1]
 						tempDict['author'] = masterList[x][y][2]
 						tempDict['title'] = masterList[x][y][0]
-						tempDict['credRating'] = -1
+						tempDict['credRating'] = svm.compute(url)
 						if x is 0:
 							tempDict['topic'] = 'general'
 						if x is 1:
@@ -84,7 +86,7 @@ def addToDict():
 						if x is 5:
 							tempDict['topic'] = 'science'
 						listInfo.append(tempDict)
-						aggregatedDict[locations[z]] = listInfo
+						aggregatedDict[location] = listInfo
 				except:
 					None
 
@@ -94,19 +96,23 @@ def getAddress(toSearch):
 	payload = {'address': toSearch, 'components':'administrative_area_level_1', 'key': 'AIzaSyBW5C6SvSUUebg5Atsj3beYMtDgwbIR6PI'}
 	r = requests.get('https://maps.googleapis.com/maps/api/geocode/json?', params=payload)
 	json = r.json()[u'results'][0]
-	for x in range(len(json[u'address_components']) - 1, len(json[u'address_components']) - 3, -1):
-		print str(json[u'address_components'][x][u'short_name'])
-		try:
-			addresses.append(str(json[u'address_components'][x][u'short_name']))
-		except:
-			None
-	return addressses[len(addresses)-1]
+	if len(json[u'address_components']) >= 2:
+		if str(json[u'address_components'][len(json[u'address_components']) - 1][u'short_name']) == 'US':
+			prepend = "USA-"
+			string = str(json[u'address_components'][len(json[u'address_components']) - 2][u'short_name'])
+			addresses.append(prepend+string)
+		else:
+			addresses.append(str(json[u'address_components'][len(json[u'address_components']) - 1][u'short_name']))
+	else:
+		addresses.append(str(json[u'address_components'][len(json[u'address_components']) - 1][u'short_name']))
+	return addresses[0]
 
 def main():
+	sys.stdout = open('Output.txt', 'w')
+	print "test"
 	getNewsAPI()
 	addToDict()
-
-
+	pprint.pprint(aggregatedDict)
 
 if __name__ == "__main__":
   main()

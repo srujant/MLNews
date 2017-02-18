@@ -1,38 +1,40 @@
-import pandas as pd
-import numpy as np
-from sklearn import datasets, svm
-import sys
-sys.path.append("..")
-#import NLProcessor
-import pprint
-import re
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.svm import LinearSVC
-from nltk.tokenize import word_tokenize
-from nltk.util import ngrams
-import sys
-reload(sys)
-sys.setdefaultencoding("utf-8")
-from sklearn.model_selection import train_test_split
-from nltk.corpus import stopwords 
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.pipeline import Pipeline
+# import pandas as pd
+# import numpy as np
+# from sklearn import datasets, svm
+# import sys
+# sys.path.append("..")
+# #import NLProcessor
+# import pprint
+# import re
+# from sklearn.feature_extraction.text import CountVectorizer
+# from sklearn.svm import LinearSVC
+# from nltk.tokenize import word_tokenize
+# from nltk.util import ngrams
+# import sys
+# reload(sys)
+# sys.setdefaultencoding("utf-8")
+# from sklearn.model_selection import train_test_split
+# from nltk.corpus import stopwords 
+# from sklearn.ensemble import RandomForestClassifier
+# from sklearn.naive_bayes import MultinomialNB
+# from sklearn.pipeline import Pipeline
 import random
+from goose import Goose
+from requests import get  
 file_name = './data/fake.csv'
 
 
 
-def clean(s):
-	letters_only = re.sub("[^a-zA-Z]", " ", s) 
-	words = letters_only.lower().split()
-	stops = set(stopwords.words("english"))
-	meaningful_words = [w for w in words if not w in stops]
-	return( " ".join( meaningful_words ))
+# def clean(s):
+# 	letters_only = re.sub("[^a-zA-Z]", " ", s) 
+# 	words = letters_only.lower().split()
+# 	stops = set(stopwords.words("english"))
+# 	meaningful_words = [w for w in words if not w in stops]
+# 	return( " ".join( meaningful_words ))
 
-def get_ngrams(text, n ):
-	n_grams = ngrams(word_tokenize(text), n)
-	return [ ' '.join(grams) for grams in n_grams]
+# def get_ngrams(text, n ):
+# 	n_grams = ngrams(word_tokenize(text), n)
+# 	return [ ' '.join(grams) for grams in n_grams]
 
 
 
@@ -157,7 +159,11 @@ def read():
 	'''
 	return
 
-def compute(text):
+def compute(url):
+	response = get(url)
+	extractor = Goose()
+	article = extractor.extract(raw_html=response.content)
+	text = article.cleaned_text
 	'''
 	read()
 	preds = []
