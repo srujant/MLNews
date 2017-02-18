@@ -128,7 +128,6 @@ def getMLP(textbody):
     sent = sentiment(textbody)
 
     entities.append(getNGrams)
-    for result in sent:
-        entities.append(result)
-
+    entities.append(sent)
+    
     return entities
