@@ -72,7 +72,8 @@ def bing_search(query):
     # query string parameters
     payload = {'q': query}
     # custom headers
-    headers = {'Ocp-Apim-Subscription-Key': '028fb806bc014b3baf2426e3ac1292dc'}
+    headers = {'Ocp-Apim-Subscription-Key': '22207001cbdc4c2487ad91d1cec1bdf2'}
+    #22207001cbdc4c2487ad91d1cec1bdf2
     # make GET request
     r = requests.get(url, params=payload, headers=headers)
     # get JSON response
