@@ -31,18 +31,19 @@
                 "id" : "MT",
                 "properties" : {
                     "name" : "Montana",
-                    "Statehood" : "Nov. 8, 1889",
                     "Topic 1" : {
-	                    "article 1 " : {
-	                        "title" : "Sample Article 1",
-	                        "url" : "http://google.com",
-	                        "author" : "Bobby",
-	                        "credibility" : 1
+	                    "<a target='_blank' href='http://google.com'>Sample Article 1</a>" : {
+	                        "Credibility" : "96%",
+	                        "Author" : "Bobby"
+	                    },
+	                    "<a target='_blank' href='http://google.com'>Sample Article 2</a>" : {
+	                        "Credibility" : "76%",
+	                        "Author" : "Not Bobby"
 	                    }
 	                    
                 }
                },
-               "popularity" : 426827
+               "hotness" : 426827
             }, {
                 "type" : "Polygon",
                 "arcs" : [[21, -21, 22, -15]],

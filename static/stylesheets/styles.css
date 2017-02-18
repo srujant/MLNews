@@ -28,3 +28,11 @@ nav {
 button {
     outline: none !important;
 }
+
+.page-title, .page-subtitle {
+    color: white;
+}
+
+#cesiumContainer {
+    margin: 0 auto;
+}
