@@ -16,8 +16,9 @@ PIECES WE NEED:
 
 
 BACKEND:
-storing title and link of article
-coordinate, city, state, country - article
+every article must have:
+
+URL, author, Title, credibility rating, topic, locations, and credibility rating
 
 
 FRONTEND:
