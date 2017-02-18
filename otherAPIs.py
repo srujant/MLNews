@@ -62,7 +62,7 @@ states = {
 }
 
 # format of return will be:
-# [general, technology, sports, business, entertainment, science]
+# [general, technology, sports, business, entertainment, science, other]
 # within each element of this list, you will have:
 # [name of article, url, provider, description]
 
@@ -71,7 +71,7 @@ def bing_search(query):
     # query string parameters
     payload = {'q': query}
     # custom headers
-    headers = {'Ocp-Apim-Subscription-Key': '028fb806bc014b3baf2426e3ac1292dc '}
+    headers = {'Ocp-Apim-Subscription-Key': '028fb806bc014b3baf2426e3ac1292dc'}
     # make GET request
     r = requests.get(url, params=payload, headers=headers)
     # get JSON response
@@ -117,9 +117,42 @@ def generateResponse():
 
 	return masterList
 
+def generateStates(query):
+	finalResult = []
+	url = 'https://api.cognitive.microsoft.com/bing/v5.0/news/trendingtopics'
+	# query string parameters
+	payload = {'q': query}
+	# custom headers
+	headers = {'Ocp-Apim-Subscription-Key': '028fb806bc014b3baf2426e3ac1292dc '}
+
+	r = requests.get(url, params=payload, headers=headers)
+
+	articles = r.json()['value']
+	max = 10
+	for article in articles:
+		if (max == 0):
+			break
+		max -= 1
+		if(type(article) is dict):
+			result = []
+			result.append(str(article['name'].encode("ascii", "ignore")))
+			result.append(str(article['webSearchUrl'].encode("ascii", "ignore")))
+			provider = article['image']['provider']
+			result.append(str(provider[0]['name'].encode("ascii", "ignore")))
+			result.append('No description available.')
+			finalResult.append(result)
+	return finalResult
 
 
+def getAllStates():
+	d = {}
+	i = 0
+	for key, value in states.iteritems():
+		d[key] = generateStates(value)
+		if i == 10:
+			break
+		i+=1
 
+	return d
 
-
-bing_search('politics')
+print(getAllStates())
