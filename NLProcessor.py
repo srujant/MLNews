@@ -1,4 +1,7 @@
-from spacy import load                       # See "Installing spaCy"
+from spacy import load     
+from goose import Goose
+from requests import get    
+import requests
 nlp = load('en')    
 
 def countEntity(text):
@@ -60,6 +63,29 @@ def getLocations(text):
     for ent in processed_text.ents:
         if ent.label_ == u'GPE':
             locations.append(ent.text.upper())
-            print(ent.text.upper())
     return locations
 
+def getNGrams(text):
+    N_GRAM_SIZE = 4
+    ngrams = []
+    processed_text = nlp(unicode(text))
+    index = 0
+    gramCount = 0
+    for i in range(0,len(processed_text) - 3):
+        localGram = []
+        for i in range(0,4):
+            localGram.append(processed_text[index])
+            index = index + 1
+        gramCount+=1
+        index = gramCount
+        ngrams.append(localGram)
+    return ngrams
+
+
+def HTMLParser(url):
+    response = get(url)
+    extractor = Goose()
+    article = extractor.extract(raw_html=response.content)
+    text = article.cleaned_text
+
+    return text
