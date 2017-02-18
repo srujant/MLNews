@@ -148,9 +148,6 @@ def getAllStates():
 	i = 0
 	for key, value in states.iteritems():
 		d[key] = generateStates(value)
-		if i == 10:
-			break
-		i+=1
 
 	return d
 
