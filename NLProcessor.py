@@ -70,7 +70,7 @@ def getLocations(text):
     for ent in processed_text.ents:
         if ent.label_ == u'GPE':
             if not ent.text.upper() in seen:
-                locations.append(ent.text.upper())
+                locations.append(str(ent.text.encode("ascii", "ignore").upper())
                 seen.add(ent.text.upper())
     return locations
 
