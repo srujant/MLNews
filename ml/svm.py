@@ -18,7 +18,7 @@ from nltk.corpus import stopwords
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
-
+import random
 file_name = './data/fake.csv'
 
 
@@ -140,6 +140,7 @@ def compute():
 
 
 def read():
+	'''
 	global df
 	fields = ['type', 'text']
 	df = pd.read_csv(file_name, skiprows = 0, usecols=fields)	
@@ -153,9 +154,11 @@ def read():
 	input = re.sub(r'[^\w]', ' ', input)
 	
 	#input = df_bias.loc[0]['text']
-	
+	'''
+	return
 
 def compute(text):
+	'''
 	read()
 	preds = []
 	count_vectorizer = CountVectorizer()
@@ -170,7 +173,7 @@ def compute(text):
 	preds.append(classifier.predict(text))
 
 	return preds
+	'''
+	return random.uniform(0, 1)
 
 
-
-print compute(text = ['Donland trump is a woman', "DONALD TRUMP WILL BE THE BEST PRESIDENT IN HISTORY"])
