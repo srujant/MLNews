@@ -4,6 +4,7 @@ import json
 import requests
 import time
 import ast
+import NLProcessor as nlp
 
 def getArticles():
 	articles = urllib2.urlopen("https://newsapi.org/v1/sources").read()
@@ -18,8 +19,12 @@ def getArticles():
 		if str(r.json()['status']) == 'ok':
 			presentArticles = json.dumps(r.json()['articles'])
 			jsonReceived = json.loads(presentArticles)[0]
-			text_file.write(jsonReceived[u'url'])
+			url = jsonReceived[u'url']
+			text = nlp.HTMLParser(url)
+			print text
 			text_file.write('\n\n\n\n')
+			
+
 	text_file.close()
 
 def main():
