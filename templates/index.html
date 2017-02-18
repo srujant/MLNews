@@ -1,0 +1,97 @@
+<html>
+
+	<title>Galileo</title>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="{{ url_for('static', filename='stylesheets/styles.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ url_for('static', filename='stylesheets/jquery-ui.css') }}" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Overpass:400,400i,700,700i" rel="stylesheet">
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script></script>
+  </script>
+	</head>
+
+	<body>
+		<script src="{{ url_for('static', filename='js/main_scripts.js') }}"></script>
+		
+	    <div class="container">
+	    	<img class="center-block logo" src="{{ url_for('static', filename='img/logo2.png') }}" />
+	    	
+	    	<div class="panel panel-primary main-panel">
+				<div class="panel-heading main-panel-heading">
+					<h3 class="panel-title center-block">Enter your information.</h3>
+				</div>
+				
+				<div class="panel-body main-panel-body">
+					<div class="input-section">
+						<span class="input-section-header">First, pick your classes.</span>
+						<br />
+						<div id="class-search-group">
+							<div class="form-group">
+								<input class="class-search form-control search-autocomplete" type="text" placeholder="Ex. CMSC131">
+							</div>
+						</div>
+						<button id="add-class" type="button" class="btn btn-warning center-block" onclick="addClass();">Add class</button>
+					</div>
+					<div class="input-section">
+						<span class="input-section-header">Next, select where you live.<br />If you commute, just select a parking lot.</span>
+						<br />
+						<div id="building-search-group">
+							<div class="form-group">
+								<input id="building-selection"class="building-search form-control search-autocomplete" type="text" placeholder="Ex. Cumberland Hall">
+							</div>
+						</div>
+					</div>
+					<div class="input-section">
+						<span class="input-section-header">Now, select any preferences you have for classes.</span>
+						<br />
+						<div class="checkbox">
+							<label>
+								<input id="walking" class="checkbox" type="checkbox" value="walking">
+								Less Walking
+							</label>
+						</div>
+
+						<div class="checkbox">
+							<label>
+								<input id="morning" class="checkbox" type="checkbox" value="morning">
+								Morning classes preferred
+							</label>
+						</div>
+						
+						<div class="checkbox">
+							<label>
+								<input id="afternoon" class="checkbox" type="checkbox" value="afternoon">
+								Afternoon classes preferred
+							</label>
+						</div>
+						
+						<div class="checkbox">
+							<label>
+							 	<input id="day" class="checkbox" type="checkbox" value="day">
+							 	No classes on
+							</label>
+						</div>
+						
+					 	<select style="width: 40%;" id="day_selected" class="form-control" style="display: inline-block; float: left;">
+						    <option selected>Friday</option>
+						    <option>Monday</option>
+						    <option>Tuesday</option>
+						    <option>Wednesday</option>
+						    <option>Thursday</option>
+						</select>
+						
+						</div>
+					</div>
+					<button id="submit" onclick="completeRequest();" type="button" class="btn btn-success center-block">Discover.</button>
+				</div>
+			</div>
+	    </div>
+	    
+	</body>
+
+</html>
