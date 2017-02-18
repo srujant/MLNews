@@ -1,3 +1,4 @@
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from spacy import load     
 from goose import Goose
 from requests import get    
@@ -88,4 +89,12 @@ def HTMLParser(url):
     article = extractor.extract(raw_html=response.content)
     text = article.cleaned_text
 
-    return text
+    return getLocations(text)
+
+
+def sentiment(textbody):
+    sith = SentimentIntensityAnalyzer()
+    score = sith.polarity_scores(textbody)
+    print(score)
+
+
