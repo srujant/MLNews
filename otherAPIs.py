@@ -1,5 +1,4 @@
 import requests
-import itertools
 
 keywords = ['politics', 'us', 'world', 'technology', 'sports', 'business', 'entertainment', 'science', 'health']
 
@@ -30,7 +29,7 @@ def bing_search(query):
 	    	thisList.append(information['url'])
 	    	provider = information['provider'][0]
 	    	thisList.append(provider['name'])
-	    	thisList.append(information[u'description'])
+	    	thisList.append(str(information['description'].encode("ascii", "ignore")))
 		masterList.append(thisList)
     return masterList
 
@@ -60,7 +59,8 @@ def generateResponse():
 	return masterList
 
 
-print(generateResponse())
 
 
 
+
+bing_search('politics')
