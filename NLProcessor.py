@@ -92,7 +92,7 @@ def HTMLParser(url):
     article = extractor.extract(raw_html=response.content)
     text = article.cleaned_text
 
-    results = getLocations(text):
+    results = getLocations(text)
 
     return results
 
