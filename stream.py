@@ -1,10 +1,8 @@
 import urllib2
 import json
 import requests
-import time
 import ast
 import NLProcessor as nlp
-from pymongo import MongoClient
 import otherAPIs as api
 from ml import svm
 import sys
