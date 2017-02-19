@@ -7,6 +7,13 @@ body {
     font-family: 'Rubik', sans-serif !important;
 }
 
+.toolbar-left {
+            display: block;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
 .black-bg {
     background: #232526; /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #111111 , #000000); /* Chrome 10-25, Safari 5.1-6 */

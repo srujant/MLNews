@@ -18,9 +18,9 @@
         <li id="stream"><a href="{{ url_for('stream') }}">NewStream</a></li>
         <li id="bias"><a href="{{ url_for('bias') }}">BiScore</a></li>
       </ul>
-      <form name="search_form" class="navbar-form navbar-left" action="/search" method = "POST">
+      <form class="navbar-form navbar-left">
         <div class="form-group">
-          <input id="search_query" name="search_query" type="text" class="form-control" placeholder="News Search">
+          <input type="text" class="form-control" placeholder="News Search">
         </div>
         <button type="submit" class="btn btn-default">Search</button>
       </form>
@@ -31,5 +31,5 @@
 <script>
     $(document).ready(function () {
       $("#{{request.endpoint}}").addClass("active");
-    });
+    })
 </script>
