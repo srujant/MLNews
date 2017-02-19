@@ -117,7 +117,7 @@ def HTMLParser(url):
     article = extractor.extract(raw_html=response.content)
     text = article.cleaned_text
 
-    if not text or text.isspace():
+    if not text or str(text).isspace():
         article = newspaper.Article(unicode(url))
         article.download()
         article.parse()
