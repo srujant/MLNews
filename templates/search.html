@@ -20,35 +20,37 @@
 					</div>
 					<button type="submit" class="btn btn-blue center-block">Search</button>
 				</form>
-
+				
+				{% for article_info in articles_info %}
+				
 				<div class="panel panel-default main-panel results-panel">
 					<div class="panel-heading main-panel-heading">
-						<i class="fa fa-external-link" aria-hidden="true"></i>
-						ARTICLE TITLE
+						<a href="{{  article_info['url'] }}" target="_blank">
+							<i class="fa fa-external-link" aria-hidden="true"></i>	
+						</a>
+					Article&nbsp;{{ article_info["id"] }}
 					</div>
 					<div class="panel-body main-panel-body">
 						<div class="row">
 							<div class="col-md-3"></div>
-							<div class="col-md-6">
-								<div id="article_progress_bar" class="center-block"></div>
-								<span class="biscore-caption">BiScore</span>
+							<div class="col-md-6 center-block">
+								<center>
+									<span class="score">{{ article_info["score"] }}</span>
+									<br />
+									<span class="score-caption">SCORE</span>
+								</center>
 							</div>
 							<div class-"col-md-3"></div>
 						</div>
 						<br />
-						<p>ARTICLE DESCRIPTION</p>
+						{{ article_info["description"] }}
 						<br />
-						Similar Searches:<br />
-						<span class="label label-keyword">Keyword 1</span>
-						<span class="label label-keyword">Keyword 2</span>
-						<span class="label label-keyword">Keyword 3</span>
 					</div>
 				</div>
+				{% endfor %}
 			</div>
 			<div class="col-md-3"></div>
 		</div>
 		
-		<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
-		<script src="{{ url_for('static', filename='js/progressbar_custom.js') }}"></script>
 	</body>
 </html>

@@ -23,6 +23,7 @@ body {
 nav {
     border: 0 !important;
     border-radius: 0px !important;
+    background: #34495e !important;
 }
 
 .navbar-brand {
@@ -133,4 +134,24 @@ button {
 .label-keyword {
     background-color: #1abc9c;
     font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.score-caption {
+    letter-spacing: 4px !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.score {
+    font-size: 2em;
+    letter-spacing: 2px !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.fa-external-link {
+    color: white !important;
 }
