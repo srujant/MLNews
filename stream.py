@@ -4,12 +4,13 @@ import json
 import requests
 import time
 import ast
-import NLProcessor as nlp
-from firebase import firebase
+#import NLProcessor as nlp
 from pymongo import MongoClient
 import otherAPIs as api
 from ml import svm
 import sys
+from iso3166 import countries
+import re
 
 client = MongoClient()
 client = MongoClient("mongodb://hophacks-bipartisan-rachitag22.c9users.io:27017")
@@ -108,11 +109,63 @@ def getAddress(toSearch):
 	return addresses[0]
 
 def main():
-	sys.stdout = open('Output.txt', 'w')
-	print "test"
-	getNewsAPI()
-	addToDict()
-	pprint.pprint(aggregatedDict)
-
+	
+	#getNewsAPI()
+	#addToDict()
+	fileDict = {}
+	with open('completedJson.txt','r') as inf:
+		fileDict = eval(inf.read())
+		for key in fileDict.keys():
+			try:
+				key = countries.get(key).alpha3
+			except:
+				key = key
+	json_data=open('template.json').read()
+	data = json.loads(json_data)
+	for x in range(0, len(data[u'features'])):
+		line = data[u'features'][x]
+		topics = {}
+		country = line[u'id']
+		country = str(country)
+		print country
+		try:
+			if country in fileDict:
+				for y in range(0, len(fileDict[country])):
+					topic = fileDict[country][y]['topic']
+					href = "<a target='_blank' href='" + fileDict[country][y]['url'] + "'>" + str(fileDict[country][y]['title']) + '</a>'
+					if topic not in topics:
+						topics[topic] = []
+					eachTopic = topics[topic]
+					credibility = {}
+					author = {}
+					article = {}
+					credibility['Credibility'] = str(fileDict[country][y]['credRating'])
+					author['Author'] = str(fileDict[country][y]['author'])
+					article[str(href)] = []
+					article[href].append(credibility)
+					article[href].append(author)
+					eachTopic.append(article)
+					topics[topic] = eachTopic
+			elif countries.get(country).alpha2 in fileDict:
+				for y in range(0, len(fileDict[country].alpha2)):
+					topic = fileDict[countries.get(country).alpha2][y]['topic']
+					href = "<a target='_blank' href='" + fileDict[countries.get(country).alpha2][y]['url'] + "'>" + str(fileDict[countries.get(country).alpha2][0]['title']) + '</a>'
+					if topic not in topics:
+						topics[topic] = []
+					eachTopic = topics[topic]
+					credibility = {}
+					author = {}
+					article = {}
+					credibility['Credibility'] = str(fileDict[countries.get(country).alpha2][y]['credRating'])
+					author['Author'] = str(fileDict[countries.get(country).alpha2][y]['author'])
+					article[href] = []
+					article[href].append(credibility)
+					article[href].append(author)
+					eachTopic.append(article)
+					topics[topic] = eachTopic
+		except:
+			None
+		pprint.pprint(topics)
+	print "____________________________"
 if __name__ == "__main__":
   main()
