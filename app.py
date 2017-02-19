@@ -1,5 +1,6 @@
 import os
 import json
+from ml import svm
 from flask import Flask
 from flask import Flask, request
 from flask import render_template
@@ -14,6 +15,8 @@ import searchFunction
 import stream
 import twitterAux
 
+svm.read()
+svm.train()
 
 app = Flask(__name__)
 
