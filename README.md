@@ -29,8 +29,8 @@ An app that lets you discover the top news in locations around the world and dis
 - [NLTK](http://www.nltk.org/)
   - Natural Language processing for determining the topic of articles in B-Stream
 - [Goose](https://github.com/GravityLabs/goose/wiki)
-	- Natural Language processing for determining the topic of articles in B-Stream
--[Scikit-learn] (https://github.com/scikit-learn/scikit-learn)
+	- Natural Language processing for determining the topic of articles in B-Stream	
+- [Scikit-learn] (https://github.com/scikit-learn/scikit-learn)
 	- Natural Language processing for determining the topic of articles in B-Stream
 - [pandas](http://pandas.pydata.org/)
 	- Data
