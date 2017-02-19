@@ -6,7 +6,7 @@ from flask import Flask, request
 from flask import render_template
 from flask import g
 from flask import jsonify
-from iflask import redirect
+from flask import redirect
 import download_corpora
 import NLProcessor
 import otherAPIs
@@ -45,22 +45,19 @@ def bias():
 @app.route('/search', methods = ['POST', 'GET'])
 def search():
     #articles_info = [{"url": "http://www.cnn.com/2017/02/18/politics/donald-trump-florida-campaign-rally/index.html", "title": "Trump gets what he wants in Florida: Campaign-level adulation - CNNPolitics.com", "score": "72", "id": "1", "description": "Melbourne, Florida (CNN)President Donald Trump, after a month of arduous and, at times, turbulent governing, got what he came for Saturday during a dusk rally here: Campaign-level adulation. Trump, who just months ago finished campaigning for the office he ..."}, {"url": "http://www.firstpost.com/entertainment/saturday-night-live-female-icons-and-impersonation-in-the-time-of-donald-trump-3289726.html", "title": "Saturday Night Live, female icons, and impersonation in the time of Donald Trump", "score": "60", "id": "2", "description": "And its truly a stranger than fiction reality we live in right now  where orange-tinted reality stars are presidents of countries and climate change scientists are being referred to as a glassy-eyed cult. Alec Baldwins completely on-point ..."}, {"url": "http://www.cnn.com/2017/02/18/politics/trump-gene-huber-rally/index.html", "title": "Trump hands mic to supporter at Florida rally - CNNPolitics.com", "score": "76", "id": "3", "description": "(CNN)In what appeared to be an improvised moment, President Donald Trump invited one of his supporters to join him on stage and take the microphone during a rally in Melbourne, Florida, on Saturday night. As the man climbed up, the President addressed ..."}, {"url": "http://www.politico.com/story/2017/02/trump-florida-rally-campaign-mode-235183", "title": "Four weeks into his presidency, Trump returns to campaign mode - POLITICO", "score": "63", "id": "4", "description": "Melbourne, Fla.  President Donald Trump's rally here featured all the classic signatures of his campaign: boasts about his poll numbers and magazine appearances, grandiose promises of quick action, protesters lining the streets, stinging attacks on the ..."}, {"url": "http://irregulartimes.com/2017/02/18/donald-trump-is-the-upside-down-of-stranger-things/", "title": "Donald Trump is the Upside Down of Stranger Things \u2013 Irregular Times", "score": "35", "id": "5", "description": "This week, when David Cicilline rose to express resistance to the cruel fascism being imposed by the White House under Donald Trump, he invoked the sinister threat depicted in the TV show Stranger Things. Cicilline explained, Like the main characters in ..."}]
-    
     if request.method == 'POST':
         if (request.form != None and request.form["search_query"] != None):
             query = request.form["search_query"]
             articles_info = manualSearch(query)
-        
-        return render_template('search.html', articles_info = articles_info)
-        
     return render_template('search.html', articles_info = articles_info)
 
 @app.route('/getjson', methods = ['POST', 'GET'])
+def getjson():
 	if request.method == 'POST':
-		date = "2/19"
-		reponse=table.get_item(Key={'dictionary': date})
-		print response
-        return reponse[1]
+    		date = "2/19"
+   		response=table.get_item(Key={'dictionary': date})
+    		print response
+    	return json.loads(reponse[1])
 
 app.run(host=os.getenv('IP', '127.0.0.1'),port=int(os.getenv('PORT', 8081)))
 

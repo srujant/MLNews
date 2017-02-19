@@ -1,17 +1,4 @@
-Cesium.BingMapsApi.defaultKey = "rAT6FD3QWEAHqFKTyVOH~PGug46gl7KWuYW5EmoKrhA~An9_0N3tOAo3VQ-1JgMBj3hOgSBb1-610evZpUQVW48gUc62JQ9RjNzRKSWBPLqI";
-
-var viewer = new Cesium.Viewer('cesiumContainer');
-
-var filePath = "static/js/cesium/Apps/SampleData/data.geojson";
-xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET",filePath,false);
-xmlhttp.send(null);
-var ogjson = xmlhttp.responseText;
-
-var geojson = '{"type": "FeatureCollection","features": ' + ogjson + "}";
-
-var sourcejson = JSON.parse(geojson);
-    
+function refrehView() {
   viewer.dataSources.add(Cesium.GeoJsonDataSource.load(sourcejson, {
         stroke: Cesium.Color.BLACK,
         fill: Cesium.Color.BLUE.withAlpha(0.2),
@@ -45,18 +32,6 @@ var sourcejson = JSON.parse(geojson);
         //Display any errrors encountered while loading.
         window.alert(error);
     });
-   $.ajax({
-            url: '/getjson',
-            data:'2/19',
-            type: 'POST',
-            success: function(response) {
-                ogjson = response;    
-                
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });)
 
 
     function prediction(value){
@@ -117,3 +92,38 @@ var sourcejson = JSON.parse(geojson);
             window.alert(error);
         });
     }
+}
+
+   $.ajax({
+            url: '/getjson',
+            data:'2/19',
+            type: 'POST',
+            success: function(response) {
+                ogjson = response;
+                geojson = '{"type": "FeatureCollection","features": ' + ogjson + "}";
+                refreshView();
+
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });)
+
+
+ 
+
+Cesium.BingMapsApi.defaultKey = "rAT6FD3QWEAHqFKTyVOH~PGug46gl7KWuYW5EmoKrhA~An9_0N3tOAo3VQ-1JgMBj3hOgSBb1-610evZpUQVW48gUc62JQ9RjNzRKSWBPLqI";
+
+var viewer = new Cesium.Viewer('cesiumContainer');
+
+var filePath = "static/js/cesium/Apps/SampleData/data.geojson";
+xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET",filePath,false);
+xmlhttp.send(null);
+var ogjson = xmlhttp.responseText;
+
+var geojson = '{"type": "FeatureCollection","features": ' + ogjson + "}";
+
+var sourcejson = JSON.parse(geojson);
+
+
