@@ -263,7 +263,6 @@ def main():
 	with open('data.txt', 'w') as outfile:
 		json.dump(data, outfile)
 	insertJson('2/19', str(data))
-	insertDict('2/19', aggregateDict)
 	with open('final.txt', 'w') as outfile:
 		json.dump(aggregatedDict, outfile)
 if __name__ == "__main__":
