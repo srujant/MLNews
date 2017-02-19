@@ -10,6 +10,24 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 nlp = load('en')    
 
+def generateEntity(text):
+    seen = set()
+    result = []
+    index = 0
+    processed_text = nlp(unicode(text))
+    for ent in processed_text.ents:
+        label = ent.label_
+        if label == u'PERSON' or label == u'NORP' or label == u'ORG' or label == u'GPE':
+            if label == u'PERSON':
+                result.append(ent.text)
+                seen.add(ent.text)
+            elif not ent.text in seen:
+                if index % 3 == 0:
+                    result.append(ent.text)
+                    seen.add(ent.text)
+        index+=1
+    return result
+
 def countEntity(text):
     entityCount = []
     PERSON = 0
@@ -141,3 +159,4 @@ def getMLP(textbody):
     send.append(sent)
     
     return send
+

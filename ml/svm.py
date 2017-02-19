@@ -1,23 +1,23 @@
-# import pandas as pd
-# import numpy as np
-# from sklearn import datasets, svm
-# import sys
-# sys.path.append("..")
-# #import NLProcessor
-# import pprint
-# import re
-# from sklearn.feature_extraction.text import CountVectorizer
-# from sklearn.svm import LinearSVC
-# from nltk.tokenize import word_tokenize
-# from nltk.util import ngrams
-# import sys
-# reload(sys)
-# sys.setdefaultencoding("utf-8")
-# from sklearn.model_selection import train_test_split
-# from nltk.corpus import stopwords 
-# from sklearn.ensemble import RandomForestClassifier
-# from sklearn.naive_bayes import MultinomialNB
-# from sklearn.pipeline import Pipeline
+import pandas as pd
+import numpy as np
+from sklearn import datasets, svm
+import sys
+sys.path.append("..")
+#import NLProcessor
+import pprint
+import re
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.svm import LinearSVC
+from nltk.tokenize import word_tokenize
+from nltk.util import ngrams
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
+from sklearn.model_selection import train_test_split
+from nltk.corpus import stopwords 
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.pipeline import Pipeline
 import random
 from goose import Goose
 from requests import get  

@@ -1,5 +1,10 @@
 import requests
 from ml import svm
+import json
+import NLProcessor as nlp
+import lxml.html
+from requests import get
+from goose import Goose
 
 def getSuggestions(query):
     url = 'https://api.cognitive.microsoft.com/bing/v5.0/suggestions/?q=' + query
@@ -22,13 +27,15 @@ def getSuggestions(query):
 
 
 def manualSearch(query):
-    url = 'https://api.cognitive.microsoft.com/bing/v5.0/news?category='+query+'&mkt=en-us'
+    similarSearches = getSuggestions(query)
+    url = 'https://api.cognitive.microsoft.com/bing/v5.0/news/search'
     # query string parameters
-    payload = {'q': query}
+    payload = {'q': query, 'freshness':'Week'}
     # custom headers
     headers = {'Ocp-Apim-Subscription-Key': '028fb806bc014b3baf2426e3ac1292dc'}
-
+    r = requests.get(url, params=payload, headers=headers)
     links = []
+    descriptions = []
     listOfArticles = r.json()['value']
     max = 5
     for article in listOfArticles:
@@ -42,8 +49,41 @@ def manualSearch(query):
         max-=1
         if(type(information) is dict):
             links.append(information['url'])
-    
-    return links
+            descriptions.append(str(information['description'].encode("ascii", "ignore")))
+    fin = []
+    fin.append(similarSearches)
+    rating = 0.0
+    i = 0
+    for link in links:
+        thisDict = {}
+        rating = svm.compute(link)
+        thisDict['description'] = descriptions[i]
+        thisDict['url'] = link
+        thisDict['score'] = str(rating)
+        i+=1
+        fin.append(thisDict)
 
+    return json.dumps(fin)
 
+def processURL(url):
+    toReturn = {}
 
+    score = svm.compute(url)
+
+    t = lxml.html.parse(url)
+
+    title = t.find(".//title").text
+
+    response = get(url)
+    extractor = Goose()
+    article = extractor.extract(raw_html=response.content)
+    file = article.cleaned_text
+
+    keywords = nlp.generateEntity(file)
+
+    toReturn['title'] = title
+    toReturn['score'] = score
+    toReturn['keywords'] = keywords
+    toReturn['url'] = url
+
+    return json.dumps(toReturn)
