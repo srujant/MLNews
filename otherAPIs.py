@@ -106,7 +106,6 @@ def generateResponse():
 	entertainmentList = bing_search('entertainment')
 	scienceList = bing_search('science')
 	scienceList += bing_search('health')
-	otherDict = getAllStates()
 
 	masterList = []
 
@@ -116,7 +115,6 @@ def generateResponse():
 	masterList.append(buisnessList)
 	masterList.append(entertainmentList)
 	masterList.append(scienceList)
-	masterList.append(otherDict)
 
 	return masterList
 

@@ -1,4 +1,4 @@
 import sys
-sys.path.insert(0, '/var/www/html/flaskapp')
+sys.path.insert(0, '~/MLNews')
 
-from flaskapp import app as application
+from MLNews import app as application
