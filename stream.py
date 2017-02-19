@@ -2,10 +2,8 @@ import urllib2
 import pprint
 import json
 import requests
-import time
 import ast
-#import NLProcessor as nlp
-from pymongo import MongoClient
+import NLProcessor as nlp
 import otherAPIs as api
 from ml import svm
 import sys
@@ -13,9 +11,6 @@ from iso3166 import countries
 import re
 import geojson
 
-client = MongoClient()
-client = MongoClient("mongodb://hophacks-bipartisan-rachitag22.c9users.io:27017")
-db = client.Bipartisan
 aggregatedDict = {}
 def getNewsAPI():
 	articles = urllib2.urlopen("https://newsapi.org/v1/sources").read()

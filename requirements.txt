@@ -1,6 +1,5 @@
 Flask==0.11.1
 Flask-WTF==0.13.1
-python-dateutil==1.5
 pytz==2012c
 simplejson==3.3.1
 urllib3==1.7.1
@@ -12,7 +11,6 @@ Pillow==2.5.1
 PyYAML==3.11
 cssselect==0.9.1
 lxml==3.3.5
-nltk==2.0.5
 requests==2.6.0
 six==1.7.3
 jieba==0.35
@@ -20,3 +18,8 @@ feedparser==5.1.3
 tldextract==1.5.1
 feedfinder2==0.0.1
 python-dateutil==2.4.0
+spacy==1.6.0
+nltk==3.2.2
+goose==1.0.25
+sklearn==0.18.1
+pandas==0.19.1
