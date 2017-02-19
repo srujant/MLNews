@@ -34,8 +34,12 @@ def manualSearch(query):
     headers = {'Ocp-Apim-Subscription-Key': '028fb806bc014b3baf2426e3ac1292dc'}
     r = requests.get(url, params=payload, headers=headers)
     links = []
+    
     descriptions = []
-    listOfArticles = r.json()['value']
+    try:
+         listOfArticles = r.json()['value']
+    except:
+          return []
     max = 5
     for article in listOfArticles:
         if('clusteredArticles' in article):
