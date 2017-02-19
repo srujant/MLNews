@@ -70,7 +70,7 @@ states = {
 def bing_search(query):
     url = 'https://api.cognitive.microsoft.com/bing/v5.0/news?category='+query+'&mkt=en-us'
     # query string parameters
-    payload = {'q': query}
+    payload = {'q': query, 'freshness' : 'Week'}
     # custom headers
     headers = {'Ocp-Apim-Subscription-Key': '22207001cbdc4c2487ad91d1cec1bdf2'}
     #22207001cbdc4c2487ad91d1cec1bdf2
