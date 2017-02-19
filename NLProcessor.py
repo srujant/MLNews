@@ -5,6 +5,7 @@ from requests import get
 import requests
 import re
 import sys  
+import newspaper
 
 reload(sys)  
 sys.setdefaultencoding('utf8')
@@ -116,8 +117,13 @@ def HTMLParser(url):
     article = extractor.extract(raw_html=response.content)
     text = article.cleaned_text
 
-    results = getLocations(text)
+    if not text or text.isspace():
+        article = newspaper.Article(unicode(url))
+        article.download()
+        article.parse()
+        text = str(article.text.encode("ascii", "ignore")
 
+    results = getLocations(text)
     return results
 
 
