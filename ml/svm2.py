@@ -213,13 +213,13 @@ def compute():
 	y = df['type']
 	
 	logreg = linear_model.LogisticRegression(C=1, penalty='l1')
-	X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=0.2, random_state=0)
-
+	X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=0.1, random_state=0)
+	'''
 	model = logreg.fit(X_train, y_train)
 	df_test = pd.read_csv(test_file, skiprows = 0)	
 
 
-	
+
 
 	df_test2 = pd.read_csv(file_name, skiprows = 0, nrows=20, usecols=['type', 'text'])	
 	X_test=v.transform(df_test['text'].values)
@@ -237,5 +237,30 @@ def compute():
 	prediction = model.predict_proba(X_test_2)
 	print prediction
 	
+	'''
+
+
+
+
+	df_test = pd.read_csv(test_file, skiprows = 0)	
+
+
+
+
+	df_test2 = pd.read_csv(file_name, skiprows = 0, nrows=20, usecols=['type', 'text'])	
+	X_test=v.transform(df_test['text'].values)
+	X_test_2=v.transform(df_test2['text'].values)
+
+	forest = RandomForestClassifier(n_estimators = 100) 
+	forest = forest.fit(X_train, y_train)
+
+
+	prediction = forest.predict(X_test)
+	print prediction
+	prediction = forest.predict_proba(X_test)
+	print prediction
+
+	prediction = forest.predict_proba(X_test_2)
+	print prediction
 	
 compute()
