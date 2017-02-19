@@ -1,17 +1,79 @@
 import urllib2
-import pprint
 import json
 import requests
+import time
 import ast
 import NLProcessor as nlp
+from pymongo import MongoClient
 import otherAPIs as api
 from ml import svm
 import sys
 from iso3166 import countries
 import re
 import geojson
+from collections import OrderedDict
 
 aggregatedDict = {}
+stateCodes = {
+	    'AK': 'Alaska',
+        'AL': 'Alabama',
+        'AR': 'Arkansas',
+        'AS': 'American Samoa',
+        'AZ': 'Arizona',
+        'CA': 'California',
+        'CO': 'Colorado',
+        'CT': 'Connecticut',
+        'DC': 'District of Columbia',
+        'DE': 'Delaware',
+        'FL': 'Florida',
+        'GA': 'Georgia',
+        'GU': 'Guam',
+        'HI': 'Hawaii',
+        'IA': 'Iowa',
+        'ID': 'Idaho',
+        'IL': 'Illinois',
+        'IN': 'Indiana',
+        'KS': 'Kansas',
+        'KY': 'Kentucky',
+        'LA': 'Louisiana',
+        'MA': 'Massachusetts',
+        'MD': 'Maryland',
+        'ME': 'Maine',
+        'MI': 'Michigan',
+        'MN': 'Minnesota',
+        'MO': 'Missouri',
+        'MP': 'Northern Mariana Islands',
+        'MS': 'Mississippi',
+        'MT': 'Montana',
+        'NA': 'National',
+        'NC': 'North Carolina',
+        'ND': 'North Dakota',
+        'NE': 'Nebraska',
+        'NH': 'New Hampshire',
+        'NJ': 'New Jersey',
+        'NM': 'New Mexico',
+        'NV': 'Nevada',
+        'NY': 'New York',
+        'OH': 'Ohio',
+        'OK': 'Oklahoma',
+        'OR': 'Oregon',
+        'PA': 'Pennsylvania',
+        'PR': 'Puerto Rico',
+        'RI': 'Rhode Island',
+        'SC': 'South Carolina',
+        'SD': 'South Dakota',
+        'TN': 'Tennessee',
+        'TX': 'Texas',
+        'UT': 'Utah',
+        'VA': 'Virginia',
+        'VI': 'Virgin Islands',
+        'VT': 'Vermont',
+        'WA': 'Washington',
+        'WI': 'Wisconsin',
+        'WV': 'West Virginia',
+        'WY': 'Wyoming'
+}
+
 def getNewsAPI():
 	articles = urllib2.urlopen("https://newsapi.org/v1/sources").read()
 	articles = ast.literal_eval(articles)
@@ -48,7 +110,6 @@ def getNewsAPI():
 						tempDict['title'] = title
 						tempDict['credRating'] = svm.compute(url)
 						tempDict['topic'] = topic
-						print tempDict
 						listInfo.append(tempDict)
 						aggregatedDict[location] = listInfo
 				except:
@@ -56,6 +117,16 @@ def getNewsAPI():
 def addToDict():
 	masterList = api.generateResponse()
 	for x in range(0, len(masterList)):
+		if x is 6:
+			statesArticles = masterList[x][location]
+			tempDict['url'] = statesArticles[1]
+			tempDict['author'] = statesArticles[2]
+			tempDict['title'] = statesArticles[0]
+			tempDict['credRating'] = svm.compute(statesArticles[1])
+			tempDict['topic'] = 'other'
+			listInfo.append(tempDict)
+			aggregatedDict[location] = listInfo
+			continue
 		for y in range(0, len(masterList[x])):
 			for z in range(0, 4):
 				try:
@@ -69,7 +140,7 @@ def addToDict():
 						tempDict['url'] = masterList[x][y][1]
 						tempDict['author'] = masterList[x][y][2]
 						tempDict['title'] = masterList[x][y][0]
-						tempDict['credRating'] = svm.compute(url)
+						tempDict['credRating'] = svm.compute(masterList[x][y][1])
 						if x is 0:
 							tempDict['topic'] = 'general'
 						if x is 1:
@@ -86,6 +157,7 @@ def addToDict():
 						aggregatedDict[location] = listInfo
 				except:
 					None
+
 
 def getAddress(toSearch):
 	addresses = []
@@ -106,8 +178,8 @@ def getAddress(toSearch):
 
 def main():
 	
-	#getNewsAPI()
-	#addToDict()
+	getNewsAPI()
+	addToDict()
 	fileDict = {}
 	with open('completedJson.txt','r') as inf:
 		fileDict = eval(inf.read())
@@ -116,9 +188,9 @@ def main():
 				key = countries.get(key).alpha3
 			except:
 				key = key
-	with open("template.json", 'r') as f:
-		read_data = f.read()
-	data =  geojson.loads(read_data)
+	# with open("template.json", 'r') as f:
+	# 	read_data = f.read()
+	data = json.load(open('template.json'), object_pairs_hook=OrderedDict)
 	data = data[u'features']
 	for x in range(0, len(data)):
 		line = data[x]
@@ -127,7 +199,6 @@ def main():
 		country = str(country)
 		name = line[u'properties'][u'name']
 		name = str(name)
-		print name
 		try:
 			if country in fileDict:
 				for y in range(0, len(fileDict[country])):
@@ -164,21 +235,17 @@ def main():
 					eachTopic.append(article)
 					topics[topic] = eachTopic
 			for topic in topics.keys():
-				print topic
 				for article in topics[topic]:
 					for element in article:
-						print element
 						for y in range(0, len(article[element])):
 							for key in article[element][y]:
-								print key
-								print article[element][y][key]
 								line[u'properties'][topic] = {element:{key:article[element][y][key]}}					
 		except:
 			None
-
 	test = './test.geojson'
-	with open(test, 'w') as outfile:
-		geojson.dump(data, outfile)
-	print "____________________________"
+	with open('data.txt', 'w') as outfile:
+		json.dump(data, outfile)	
+	with open('final.txt', 'w') as outfile:
+		json.dump(aggregatedDict, outfile)
 if __name__ == "__main__":
   main()
