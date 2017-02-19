@@ -45,7 +45,20 @@ var sourcejson = JSON.parse(geojson);
         //Display any errrors encountered while loading.
         window.alert(error);
     });
-    
+   $.ajax({
+            url: '/getjson',
+            data:'2/19',
+            type: 'POST',
+            success: function(response) {
+                ogjson = response;    
+                
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });)
+
+
     function prediction(value){
         viewer.dataSources.removeAll(true);
         if(value == "current"){
