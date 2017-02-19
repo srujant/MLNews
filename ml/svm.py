@@ -2,7 +2,9 @@ import pandas as pd
 import numpy as np
 from sklearn import datasets, svm, cross_validation
 import sys
-sys.path.append("..")
+sys.path.append("../")
+sys.path.append("./data/ml")
+sys.path.append("./data")
 import re
 from sklearn.feature_extraction.text import CountVectorizer
 import sys
@@ -143,3 +145,6 @@ def compute(url):
 	
 	prediction = forest.predict_proba(X_test)
 	return prediction[0][0]
+read()
+train()
+compute('http://www.cnbc.com/2017/02/18/heres-how-congress-is-handling-russia-investigations.html')

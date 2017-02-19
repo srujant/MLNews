@@ -2,10 +2,12 @@ import urllib2
 import json
 import requests
 import ast
+import sys
 import NLProcessor as nlp
 import otherAPIs as api
+sys.path.append('./ml/data/')
+sys.path.append('./ml/')
 from ml import svm
-import sys
 from iso3166 import countries
 import re
 import geojson
@@ -232,12 +234,14 @@ def main():
 					article[href].append(author)
 					eachTopic.append(article)
 					topics[topic] = eachTopic
+			a = ""
 			for topic in topics.keys():
 				for article in topics[topic]:
 					for element in article:
 						for y in range(0, len(article[element])):
 							for key in article[element][y]:
-								line[u'properties'][topic] = {element:{key:article[element][y][key]}}					
+								a += article[element][y] + '\n'
+								line[u'properties'][topic] = {element:{'info':a}}					
 		except:
 			None
 	test = './test.geojson'
