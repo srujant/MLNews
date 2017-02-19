@@ -19,8 +19,14 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 import random
-file_name = './data/fake.csv'
+from sklearn import linear_model, cross_validation
 
+
+
+
+
+file_name = './data/fake.csv'
+test_file = './data/test.csv'
 
 
 def clean(s):
@@ -140,24 +146,28 @@ def compute():
 
 
 def read():
-	'''
+	
 	global df
 	fields = ['type', 'text']
-	df = pd.read_csv(file_name, skiprows = 0, usecols=fields)	
+	df = pd.read_csv(file_name, skiprows = 0, nrows= 7000, usecols=fields)	
 	df_goal = df['type']
 
-	df_bias = df.loc[df['type'] == 'bias']
+	df = df[df['type'].isin(['bias', 'fake', 'conspiracy', 'bs'])]
 	df["text"].fillna(" ",inplace=True)  
 	df["type"].fillna(" ",inplace=True)  
 	global input
-	input = df.loc[0]['text']
-	input = re.sub(r'[^\w]', ' ', input)
+	df['text'] = df['text'].str.replace(r'[^\w]', ' ')
+
+	
+
+	#input = df.loc['text']
+	#input = re.sub(r'[^\w]', ' ', input)
 	
 	#input = df_bias.loc[0]['text']
-	'''
-	return
+	
+	#return
 
-def compute(text):
+def compute():
 	'''
 	read()
 	preds = []
@@ -174,6 +184,50 @@ def compute(text):
 
 	return preds
 	'''
-	return random.uniform(0, 1)
 
 
+	read()
+	preds = []
+	v = CountVectorizer(ngram_range=(1,3), stop_words='english')
+	
+	
+	
+	#pprint(v.fit(["an apple a day keeps the doctor away"]).vocabulary_)
+
+
+	#pprint(count_vectorizer.fit([test]).vocabulary_)
+	X = v.fit_transform(df['text'].values)
+	y = df['type']
+	
+	logreg = linear_model.LogisticRegression(C=1, penalty='l1')
+	X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=0.2, random_state=0)
+
+	model = logreg.fit(X_train, y_train)
+	df_test = pd.read_csv(test_file, skiprows = 0)	
+
+	'''
+	text = v.fit_transform(df['text'].values)
+	prediction = model.predict_log_proba(text)
+	print prediction
+	'''
+
+	
+
+	df_test2 = pd.read_csv(file_name, skiprows = 0, nrows=20, usecols=['type', 'text'])	
+	X_test=v.transform(df_test['text'].values)
+	X_test_2=v.transform(df_test2['text'].values)
+
+
+	print df_test2
+
+	df_test = pd.read_csv(test_file, skiprows = 0)
+	
+	
+	prediction = model.predict_proba(X_test)
+	print prediction
+
+	prediction = model.predict_proba(X_test_2)
+	print prediction
+	
+compute()
+#read()
