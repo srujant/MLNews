@@ -4,10 +4,13 @@ import json
 import requests
 import time
 import ast
-import NLProcessor as nlp
-from firebase import firebase
+#import NLProcessor as nlp
 from pymongo import MongoClient
 import otherAPIs as api
+from ml import svm
+import sys
+from iso3166 import countries
+import re
 
 client = MongoClient()
 client = MongoClient("mongodb://hophacks-bipartisan-rachitag22.c9users.io:27017")
@@ -40,7 +43,6 @@ def getNewsAPI():
 					locations = nlp.HTMLParser(url)
 					for z in range(0, len(locations)):
 						location = str(getAddress(str(locations[z])))
-						print location
 						if location not in aggregatedDict:
 							aggregatedDict[location] = []
 						listInfo = aggregatedDict[location]
@@ -48,11 +50,11 @@ def getNewsAPI():
 						tempDict['url'] = url
 						tempDict['author'] = author
 						tempDict['title'] = title
-						tempDict['credRating'] = credRating
+						tempDict['credRating'] = svm.compute(url)
 						tempDict['topic'] = topic
+						print tempDict
 						listInfo.append(tempDict)
 						aggregatedDict[location] = listInfo
-						pprint.pprint(aggregatedDict)
 				except:
 					None
 def addToDict():
@@ -63,14 +65,15 @@ def addToDict():
 				try:
 					locations = nlp.HTMLParser(masterList[x][y][1])
 					for z in range(0, len(locations)):
-						if locations[z] not in aggregatedDict:
-							aggregatedDict[locations[z]] = []
-						listInfo = aggregatedDict[locations[z]]
+						location = str(getAddress(str(locations[z])))
+						if location not in aggregatedDict:
+							aggregatedDict[location] = []
+						listInfo = aggregatedDict[location]
 						tempDict = {}
 						tempDict['url'] = masterList[x][y][1]
 						tempDict['author'] = masterList[x][y][2]
 						tempDict['title'] = masterList[x][y][0]
-						tempDict['credRating'] = -1
+						tempDict['credRating'] = svm.compute(url)
 						if x is 0:
 							tempDict['topic'] = 'general'
 						if x is 1:
@@ -84,7 +87,7 @@ def addToDict():
 						if x is 5:
 							tempDict['topic'] = 'science'
 						listInfo.append(tempDict)
-						aggregatedDict[locations[z]] = listInfo
+						aggregatedDict[location] = listInfo
 				except:
 					None
 
@@ -94,19 +97,75 @@ def getAddress(toSearch):
 	payload = {'address': toSearch, 'components':'administrative_area_level_1', 'key': 'AIzaSyBW5C6SvSUUebg5Atsj3beYMtDgwbIR6PI'}
 	r = requests.get('https://maps.googleapis.com/maps/api/geocode/json?', params=payload)
 	json = r.json()[u'results'][0]
-	for x in range(len(json[u'address_components']) - 1, len(json[u'address_components']) - 3, -1):
-		print str(json[u'address_components'][x][u'short_name'])
-		try:
-			addresses.append(str(json[u'address_components'][x][u'short_name']))
-		except:
-			None
-	return addressses[len(addresses)-1]
+	if len(json[u'address_components']) >= 2:
+		if str(json[u'address_components'][len(json[u'address_components']) - 1][u'short_name']) == 'US':
+			prepend = "USA-"
+			string = str(json[u'address_components'][len(json[u'address_components']) - 2][u'short_name'])
+			addresses.append(prepend+string)
+		else:
+			addresses.append(str(json[u'address_components'][len(json[u'address_components']) - 1][u'short_name']))
+	else:
+		addresses.append(str(json[u'address_components'][len(json[u'address_components']) - 1][u'short_name']))
+	return addresses[0]
 
 def main():
-	getNewsAPI()
-	addToDict()
+	
+	#getNewsAPI()
+	#addToDict()
+	fileDict = {}
+	with open('completedJson.txt','r') as inf:
+		fileDict = eval(inf.read())
+		for key in fileDict.keys():
+			try:
+				key = countries.get(key).alpha3
+			except:
+				key = key
+	json_data=open('template.json').read()
+	data = json.loads(json_data)
+	topics = {}
+	for x in range(0, len(data[u'features'])):
+		line = data[u'features'][x]
+		country = line[u'id']
+		country = str(country)
+		try:
+			if country in fileDict:
 
-
-
+				for y in range(0, len(fileDict[country])):
+					topic = fileDict[country][y]
+					href = "<a target='_blank' href='" + fileDict[country][y]['url'] + "'>" + str(fileDict[country][y]['title']) + '</a>'
+					if topic not in topics:
+						topics[topic] = []
+						eachTopic = topics[topic]
+						credibility = {}
+						author = {}
+						article = {}
+						credibility['Credibility'] = str(fileDict[country][0]['credRating'])
+						author['Author'] = str(fileDict[country][0]['author'])
+						article[str(href)] = []
+						article[href].append(credibility)
+						article[href].append(author)
+						eachTopic.append(article)
+						topics[topic] = eachTopic
+					elif countries.get(country).alpha2 in fileDict:
+						topic = fileDict[countries.get(country).alpha2][0]['topic']
+						href = "<a target='_blank' href='" + fileDict[countries.get(country).alpha2][0]['url'] + "'>" + str(fileDict[countries.get(country).alpha2][0]['title']) + '</a>'
+						if topic not in topics:
+							topics[topic] = []
+						eachTopic = topics[topic]
+						credibility = {}
+						author = {}
+						article = {}
+						credibility['Credibility'] = str(fileDict[countries.get(country).alpha2][0]['credRating'])
+						author['Author'] = str(fileDict[countries.get(country).alpha2][0]['author'])
+						article[href] = []
+						article[href].append(credibility)
+						article[href].append(author)
+						eachTopic.append(article)
+						topics[topic] = eachTopic
+		except:
+			None
+		# print country
+		# pprint.pprint(topics)
+	print "____________________________"
 if __name__ == "__main__":
   main()
