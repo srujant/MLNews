@@ -122,50 +122,50 @@ def main():
 				key = key
 	json_data=open('template.json').read()
 	data = json.loads(json_data)
-	topics = {}
 	for x in range(0, len(data[u'features'])):
 		line = data[u'features'][x]
+		topics = {}
 		country = line[u'id']
 		country = str(country)
+		print country
 		try:
 			if country in fileDict:
-
 				for y in range(0, len(fileDict[country])):
-					topic = fileDict[country][y]
+					topic = fileDict[country][y]['topic']
 					href = "<a target='_blank' href='" + fileDict[country][y]['url'] + "'>" + str(fileDict[country][y]['title']) + '</a>'
 					if topic not in topics:
 						topics[topic] = []
-						eachTopic = topics[topic]
-						credibility = {}
-						author = {}
-						article = {}
-						credibility['Credibility'] = str(fileDict[country][0]['credRating'])
-						author['Author'] = str(fileDict[country][0]['author'])
-						article[str(href)] = []
-						article[href].append(credibility)
-						article[href].append(author)
-						eachTopic.append(article)
-						topics[topic] = eachTopic
-					elif countries.get(country).alpha2 in fileDict:
-						topic = fileDict[countries.get(country).alpha2][0]['topic']
-						href = "<a target='_blank' href='" + fileDict[countries.get(country).alpha2][0]['url'] + "'>" + str(fileDict[countries.get(country).alpha2][0]['title']) + '</a>'
-						if topic not in topics:
-							topics[topic] = []
-						eachTopic = topics[topic]
-						credibility = {}
-						author = {}
-						article = {}
-						credibility['Credibility'] = str(fileDict[countries.get(country).alpha2][0]['credRating'])
-						author['Author'] = str(fileDict[countries.get(country).alpha2][0]['author'])
-						article[href] = []
-						article[href].append(credibility)
-						article[href].append(author)
-						eachTopic.append(article)
-						topics[topic] = eachTopic
+					eachTopic = topics[topic]
+					credibility = {}
+					author = {}
+					article = {}
+					credibility['Credibility'] = str(fileDict[country][y]['credRating'])
+					author['Author'] = str(fileDict[country][y]['author'])
+					article[str(href)] = []
+					article[href].append(credibility)
+					article[href].append(author)
+					eachTopic.append(article)
+					topics[topic] = eachTopic
+			elif countries.get(country).alpha2 in fileDict:
+				for y in range(0, len(fileDict[country].alpha2)):
+					topic = fileDict[countries.get(country).alpha2][y]['topic']
+					href = "<a target='_blank' href='" + fileDict[countries.get(country).alpha2][y]['url'] + "'>" + str(fileDict[countries.get(country).alpha2][0]['title']) + '</a>'
+					if topic not in topics:
+						topics[topic] = []
+					eachTopic = topics[topic]
+					credibility = {}
+					author = {}
+					article = {}
+					credibility['Credibility'] = str(fileDict[countries.get(country).alpha2][y]['credRating'])
+					author['Author'] = str(fileDict[countries.get(country).alpha2][y]['author'])
+					article[href] = []
+					article[href].append(credibility)
+					article[href].append(author)
+					eachTopic.append(article)
+					topics[topic] = eachTopic
 		except:
 			None
-		# print country
-		# pprint.pprint(topics)
+		pprint.pprint(topics)
 	print "____________________________"
 if __name__ == "__main__":
   main()
