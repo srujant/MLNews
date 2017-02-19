@@ -4,7 +4,7 @@ from goose import Goose
 from requests import get    
 import requests
 import re
-import sys  
+import sys
 import newspaper
 
 reload(sys)  
@@ -121,8 +121,8 @@ def HTMLParser(url):
         article = newspaper.Article(unicode(url))
         article.download()
         article.parse()
-        text = str(article.text.encode("ascii", "ignore"))
-    
+        text = str(article.text)
+   
     results = getLocations(text)
     return results
 
@@ -132,7 +132,7 @@ def sentiment(textbody):
     pos = 0.0
     neu = 0.0
     compound = 0.0
-    total = 0 
+    total = 0
 
     sentences = nlp(unicode(textbody))
 
@@ -163,6 +163,6 @@ def getMLP(textbody):
 
     send.append(entities)
     send.append(sent)
-    
     return send
+
 

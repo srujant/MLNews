@@ -8,12 +8,11 @@ from flask import g
 from flask import jsonify
 from flask import redirect
 import download_corpora
-import NLProcess
+import NLProcessor
 import otherAPIs
 import scraper
 import searchFunction
 import stream
-import twitterAux
 
 svm.read()
 svm.train()
@@ -53,7 +52,7 @@ def search():
     return render_template('search.html', articles_info = articles_info)
 
 
-app.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8080)))
+app.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8081)))
 
 if __name__ == '__main__':
     app.run()
