@@ -27,7 +27,6 @@ def getSuggestions(query):
 
 
 def manualSearch(query):
-    similarSearches = getSuggestions(query)
     url = 'https://api.cognitive.microsoft.com/bing/v5.0/news/search'
     # query string parameters
     payload = {'q': query, 'freshness':'Week'}
@@ -51,7 +50,6 @@ def manualSearch(query):
             links.append(information['url'])
             descriptions.append(str(information['description'].encode("ascii", "ignore")))
     fin = []
-    fin.append(similarSearches)
     rating = 0.0
     i = 0
     for link in links:
@@ -60,7 +58,6 @@ def manualSearch(query):
         thisDict['description'] = descriptions[i]
         thisDict['url'] = link
         thisDict['score'] = str(rating)
-        i+=1
         fin.append(thisDict)
 
     return json.dumps(fin)
