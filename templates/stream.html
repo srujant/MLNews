@@ -1,0 +1,32 @@
+<html>
+
+	<title>Bipartisan | Stream</title>
+    
+    {% include 'head.html' %}
+
+   
+	<body class="black-bg">
+		<script src="https://cesiumjs.org/releases/1.30/Build/Cesium/Cesium.js"></script>
+        {% include 'navbar.html' %}
+
+	    <div class="container">
+	       <h1 class="page-title">B-Stream</h1>
+	       <span class="page-subtitle">See a global heatmap and discover the top news anywhere you'd like.</span>
+	       <hr class="title-hr"></hr>
+	       <span>View how news will spread in the future</span>
+	       <br />
+	       <select id ="ddl" name="ddl" onmousedown="this.value='';" onchange="prediction(this.value);">
+	       	  <option value='current'>Current</option>
+			  <option value='week'>1 week</option>
+			  <option value='month'>1 month</option>
+			  <option value='year'>1 year</option>
+			</select>
+	       <div id="cesiumContainer"></div>
+	       
+	    </div>
+	    
+	    <script src="{{ url_for('static', filename='js/stream.js') }}"></script>
+	    
+	</body>
+
+</html>

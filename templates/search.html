@@ -1,0 +1,59 @@
+<html>
+	<title>BiPartisan | Search</title>
+	
+	{% include 'head.html' %}
+	
+	<body>
+		{% include 'navbar.html' %}
+		<script src="https://use.fontawesome.com/cf5e89bc9e.js"></script>
+		
+		<div class="container">
+			<h1 class="page-title">B-Search</h1>
+			<span class="page-subtitle">Search for news related to anything you'd like, and see the most trustworthy articles.</span>
+			<hr class="title-hr"></hr>
+			
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<form name="search_form" class="article-search-form" action="/search" method = "POST">
+					<div class="form-group">
+						<input id="search_query" name="search_query" type="text" class="form-control" placeholder="Enter keywords, people, or anything else here...">
+					</div>
+					<button type="submit" class="btn btn-blue center-block">Search</button>
+				</form>
+				
+				{% for article_info in articles_info %}
+				
+				<div class="panel panel-default main-panel results-panel">
+					<div class="panel-heading main-panel-heading">
+						<a class="white-link" href="{{  article_info['url'] }}" target="_blank">	{{ article_info["title"] }}
+						</a>
+					</div>
+					<div class="panel-body main-panel-body">
+						<div class="row">
+							<div class="col-md-3"></div>
+							<div class="col-md-6 center-block">
+								<center>
+									<span class="score">{{ article_info["score"] }}</span>
+									<br />
+									<span class="score-caption">SCORE</span>
+								</center>
+							</div>
+							<div class-"col-md-3"></div>
+						</div>
+						<br />
+						{{ article_info["description"] }}
+						<br />
+						<span class="center-block">
+							<a href="{{  article_info['url'] }}" class="button-link" target="_blank">
+								<button class="btn btn-info center-block">View Article&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></button>
+							</a>
+						</span>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+		
+	</body>
+</html>

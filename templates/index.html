@@ -1,1 +1,50 @@
-fasldfjalsdjfasdfs
+<html>
+	<title>Bipartisan | Home</title>
+	{% include 'head.html' %}
+	<body>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+		
+		{% include 'navbar.html' %}
+		<div class="container">
+			<img class="center-block logo" src="{{ url_for('static', filename='img/logo2.png') }}">
+			
+			<div class="col-md-12 center-block">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-6 main-content">
+						<div class="panel panel-default main-panel">
+							<div class="panel-heading main-panel-heading">What is Bipartisan?</div>
+							<div class="panel-body main-panel-body">
+								Bipartisan is an app that lets you view news in a meaningful way by discovering the most truthful news from the right places.
+							</div>
+						</div>
+						<div class="panel panel-default main-panel">
+							<div class="panel-heading main-panel-heading">What Can I Do?</div>
+							<div class="panel-body main-panel-body">
+								Want news in a certain place? Check out our <a href="{{ url_for('stream') }}">B-Stream</a>, a live map of the world. Click anywhere to see the top news in that location <i>right now</i>. News is organized by topic as well as our B-Score &#8212; a score that shows how truthful and accurate a certain article is.
+								<br />
+								Have a specific article that you want us to analyze? Head over to the <a href="{{ url_for('bias') }}">B-Score</a> tab to enter the link to any article you stumble upon and get our official confidence rating in that article.
+								<br />
+								Don't have a specific article? Just search for a topic of choice on the <a href="{{ url_for('search') }}">B-Search</a> page.
+							</div>
+						</div>
+						<div class="panel panel-default main-panel">
+							<div class="panel-heading main-panel-heading">How Does It Work?</div>
+							<div class="panel-body main-panel-body">
+								Portals citizen-media peer-to-peer, out-of-the-box share: bricks-and-clicks rich beta-test redefine plug-and-play. Cross-platform compelling bandwidth, mission-critical envisioneer benchmark next-generation. Integrated action-items user-centric users redefine empower maximize, one-to-one value brand experiences benchmark iterate standards-compliant ROI widgets capture leverage; enable, engage e-services. Viral, transform empower citizen-media action-items eyeballs 24/7 functionalities infomediaries ROI cultivate, redefine. Strategize integrate extensible whiteboard user-contributed share synthesize rich-clientAPIs. Leading-edge transform empower collaborative folksonomies deploy enhance evolve syndicate integrate platforms distributed frictionless users recontextualize communities end-to-end plug-and-play: wireless wikis matrix. Architectures optimize end-to-end cross-media, "virtual eyeballs syndicate distributed."
+							</div>
+						</div>
+						<div class="panel panel-default main-panel">
+							<div class="panel-heading main-panel-heading">Lemme See Your Code!</div>
+							<div class="panel-body main-panel-body">
+								Since we love sharing, check out the <a href="https://github.com/srujant/MLNews" target="_blank">GitHub repo</a>!
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

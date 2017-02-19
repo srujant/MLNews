@@ -1,0 +1,87 @@
+<script src="Build/Cesium/Cesium.js"></script>
+<!doctype html>
+<html>
+<head>
+<title>BiPartisan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- fonts -->
+<link href="//fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet">
+<!-- /fonts -->
+<!-- css -->
+<link href="css/bootstrap.css" rel="stylesheet" type='text/css' media="all" />
+<link href="css/style.css" rel="stylesheet" type='text/css' media="all" />
+<!-- /css -->
+</head>
+<style>
+  @import url(Build/Cesium/Widgets/widgets.css);
+  h1 {
+  	text-align: center;
+  	font-size: 40px;
+    margin-top: 20px;
+  	color: #fff;
+  }
+  h2 {
+  	text-align: center;
+  	font-size: 20px;
+  	margin-bottom: 40px;
+  	color: #fff;
+  }
+  #cesiumContainer {
+          width: 95%;
+      height: 80% ;
+      overflow: hidden;
+      }
+      #content{
+      border-collapse: collapse;
+    }
+  </style>
+<body>
+<h1>BiPartisan</h1>
+<h2>View your news from a reliable source</h2>
+<div id="cesiumContainer" ></div>
+<script>
+  Cesium.BingMapsApi.defaultKey = "rAT6FD3QWEAHqFKTyVOH~PGug46gl7KWuYW5EmoKrhA~An9_0N3tOAo3VQ-1JgMBj3hOgSBb1-610evZpUQVW48gUc62JQ9RjNzRKSWBPLqI";
+var viewer = new Cesium.Viewer('cesiumContainer');
+  viewer.dataSources.add(Cesium.GeoJsonDataSource.load('Apps/SampleData/ne_10m_us_states.topojson', {
+        stroke: Cesium.Color.BLACK,
+        fill: Cesium.Color.BLUE.withAlpha(0.2),
+        strokeWidth: 0
+    }));
+   var promise = Cesium.GeoJsonDataSource.load('Apps/SampleData/ne_10m_us_states.topojson');
+    promise.then(function(dataSource) {
+        viewer.dataSources.add(dataSource);
+
+        //Get the array of entities
+        var entities = dataSource.entities.values;
+        
+        var colorHash = {};
+        for (var i = 0; i < entities.length; i++) {
+            var entity = entities[i];
+            var name = entity.name;
+            //Replace population with number of tweets from state
+            var population = entity.properties.Population;
+            var color = colorHash[name];
+            if (!color) {
+                //Replace 38332521 with number of tweets that would make a state "hot"
+                var alphalevel = population/38332521;
+                color = Cesium.Color.RED.withAlpha(alphalevel);
+                colorHash[name] = color;
+            }
+            
+            entity.polygon.material = color;
+            entity.polygon.outline = false;
+        }
+    }).otherwise(function(error){
+        //Display any errrors encountered while loading.
+        window.alert(error);
+    });
+   </script>
+<!-- js files -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/validator.min.js"></script>
+<!-- /js files -->
+</body>
+</html>
