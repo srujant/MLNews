@@ -152,7 +152,7 @@ button {
 }
 
 .score {
-    font-size: 2em;
+    font-size: 2.5em;
     letter-spacing: 2px !important;
     text-align: center !important;
     margin-left: auto !important;
@@ -161,4 +161,8 @@ button {
 
 .fa-external-link {
     color: white !important;
+}
+
+.button-link:hover {
+    text-decoration: none !important;
 }
