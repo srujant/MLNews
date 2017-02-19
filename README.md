@@ -1,5 +1,3 @@
-![logo-image](https://raw.githubusercontent.com/rachitag22/galileo/master/static/img/logo3.png)
+![logo-image](https://raw.githubusercontent.com/srujant/MLNews/master/static/img/logo3.png)
 
-An upgraded version of UMD's deteroriating VENUS app. Lets you find an optimal schedule based on your classes and preferences.
-
-Built using Flask (HTML/CSS/JS + Python). Check it out on [Heroku](https://hackstreetboys-galileo.herokuapp.com)!
+An app that lets you discover the top news in locations around the world and discover the credibility of any article using machine learning.

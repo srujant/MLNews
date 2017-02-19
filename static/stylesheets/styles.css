@@ -1,0 +1,180 @@
+body {
+    background: #2196f3; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2196f3 , #f44336); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2196f3 , #f44336); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+    box-shadow: none;
+    font-family: 'Rubik', sans-serif !important;
+}
+
+select {
+    color: #000000;
+}
+
+.toolbar-left {
+            display: block;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+.black-bg {
+    background: #232526; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #111111 , #000000); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #111111 , #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.logo {
+    width: 75%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+nav {
+    border: 0 !important;
+    border-radius: 0px !important;
+    background: #34495e !important;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+
+.navbar-brand > img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+
+button {
+    outline: none !important;
+}
+
+.page-title, .page-subtitle {
+    color: white;
+}
+
+#cesiumContainer {
+    margin: 0 auto;
+}
+
+.main-panel {
+    border-color: #34495e !important;
+}
+
+.main-panel-heading {
+    background-color: #34495e !important;
+    color: white !important;
+    font-weight: 700;
+}
+
+.main-panel-body {
+    color: #2c3e50 !important;
+}
+
+.results-panel {
+    margin-top: 30px;
+}
+
+.btn {
+    border: 0 none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+
+.btn-blue { 
+  color: #FFFFFF; 
+  background-color: #3498DB; 
+  border-color: #2980B9; 
+} 
+ 
+.btn-blue:hover, 
+.btn-blue:focus, 
+.btn-blue:active, 
+.btn-blue.active, 
+.open .dropdown-toggle.btn-blue { 
+  color: #FFFFFF; 
+  background-color: #2980b9; 
+  border-color: #2980B9; 
+} 
+ 
+.btn-blue:active, 
+.btn-blue.active, 
+.open .dropdown-toggle.btn-blue { 
+  background-image: none; 
+} 
+
+
+
+
+ 
+.navbar-default .navbar-toggle {
+    border: none !important;
+    background: none !important;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background: none !important;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar {
+    background-color: white !important;
+}
+
+.progressbar-text {
+    transform: translate(-50%, 0) !important;
+    font-size: 3em !important;
+}
+
+.biscore-caption {
+    letter-spacing: 4px;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+
+.label-keyword {
+    background-color: #1abc9c;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.score-caption {
+    letter-spacing: 4px !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.score {
+    font-size: 2.5em;
+    letter-spacing: 2px !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.fa-external-link {
+    color: white !important;
+}
+
+.button-link:hover {
+    text-decoration: none !important;
+}
+
+.white-link { 
+    color: white !important;
+}
+
+.white-link:hover {
+    color: #ecf0f1 !important;
+}
