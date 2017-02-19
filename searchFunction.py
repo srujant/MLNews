@@ -55,7 +55,7 @@ def manualSearch(query):
     for link in links:
         thisDict = {}
         rating = svm.compute(link)
-        thisDict['id'] = str(i)
+        thisDict['id'] = str(i+1)
         thisDict['description'] = descriptions[i]
         thisDict['url'] = link
         thisDict['score'] = str(rating)
@@ -86,4 +86,3 @@ def processURL(url):
     toReturn['url'] = url
 
     return json.dumps(toReturn)
-
