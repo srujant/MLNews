@@ -3,9 +3,9 @@
 An app that lets you discover the top news in locations around the world and discover the credibility of any article using machine learning.
 
 ## What is it?
-- Bipartisan is an app that lets you view news in a meaningful way by discovering the most truthful news from the right places.
-- Bipartisan allows you to see the top news in every region of the world using the [B-Stream](https://hophacks-bipartisan-rachitag22.c9users.io/stream)
-- You can even analyze specific articles using our [B-Score](https://hophacks-bipartisan-rachitag22.c9users.io/bias)
+- Bipartisan is a web app that lets you view news in a meaningful way by discovering the most truthful news from the right places. 
+- Bipartisan allows you to see the top news in every region of the world using the [B-Stream](https://hophacks-bipartisan-rachitag22.c9users.io/stream) and it also offers search functionalites. Every result returned is given a B-Score [B-Score](https://hophacks-bipartisan-rachitag22.c9users.io/bias) (credibility ranking) backed by the analysis of huge amounts of data churning through our Natural Language Processing and Machine Learning platforms
+- “The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.” - Daniel J. Boorstin
 
 ## APIs Used
 - [Bing News Search](https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api) and [News API] (https://newsapi.org)
