@@ -11,6 +11,7 @@ from ml import svm
 import sys
 from iso3166 import countries
 import re
+import geojson
 
 client = MongoClient()
 client = MongoClient("mongodb://hophacks-bipartisan-rachitag22.c9users.io:27017")
@@ -120,14 +121,18 @@ def main():
 				key = countries.get(key).alpha3
 			except:
 				key = key
-	json_data=open('template.json').read()
-	data = json.loads(json_data)
-	for x in range(0, len(data[u'features'])):
-		line = data[u'features'][x]
+	with open("template.json", 'r') as f:
+		read_data = f.read()
+	data =  geojson.loads(read_data)
+	data = data[u'features']
+	for x in range(0, len(data)):
+		line = data[x]
 		topics = {}
 		country = line[u'id']
 		country = str(country)
-		print country
+		name = line[u'properties'][u'name']
+		name = str(name)
+		print name
 		try:
 			if country in fileDict:
 				for y in range(0, len(fileDict[country])):
@@ -142,12 +147,12 @@ def main():
 					credibility['Credibility'] = str(fileDict[country][y]['credRating'])
 					author['Author'] = str(fileDict[country][y]['author'])
 					article[str(href)] = []
-					article[href].append(credibility)
-					article[href].append(author)
+					article[str(href)].append(credibility)
+					article[str(href)].append(author)
 					eachTopic.append(article)
 					topics[topic] = eachTopic
 			elif countries.get(country).alpha2 in fileDict:
-				for y in range(0, len(fileDict[country].alpha2)):
+				for y in range(0, len(fileDict[countries.get(country).alpha2])):
 					topic = fileDict[countries.get(country).alpha2][y]['topic']
 					href = "<a target='_blank' href='" + fileDict[countries.get(country).alpha2][y]['url'] + "'>" + str(fileDict[countries.get(country).alpha2][0]['title']) + '</a>'
 					if topic not in topics:
@@ -158,14 +163,27 @@ def main():
 					article = {}
 					credibility['Credibility'] = str(fileDict[countries.get(country).alpha2][y]['credRating'])
 					author['Author'] = str(fileDict[countries.get(country).alpha2][y]['author'])
-					article[href] = []
+					article[str(href)] = []
 					article[href].append(credibility)
 					article[href].append(author)
 					eachTopic.append(article)
 					topics[topic] = eachTopic
+			for topic in topics.keys():
+				print topic
+				for article in topics[topic]:
+					for element in article:
+						print element
+						for y in range(0, len(article[element])):
+							for key in article[element][y]:
+								print key
+								print article[element][y][key]
+								line[u'properties'][topic] = {element:{key:article[element][y][key]}}					
 		except:
 			None
-		pprint.pprint(topics)
+
+	test = './test.geojson'
+	with open(test, 'w') as outfile:
+		geojson.dump(data, outfile)
 	print "____________________________"
 if __name__ == "__main__":
   main()

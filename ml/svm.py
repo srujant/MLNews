@@ -19,7 +19,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 import random
-<<<<<<< HEAD
 from sklearn import linear_model, cross_validation
 
 
@@ -49,7 +48,6 @@ file_name = './data/fake.csv'
 # 	stops = set(stopwords.words("english"))
 # 	meaningful_words = [w for w in words if not w in stops]
 # 	return( " ".join( meaningful_words ))
->>>>>>> b16af8ecc3c57ba4196d05c653a6cd100b64056f
 
 # def get_ngrams(text, n ):
 # 	n_grams = ngrams(word_tokenize(text), n)
@@ -243,5 +241,3 @@ def compute(url):
 	prediction = model.predict_proba(X_test_2)
 	print prediction
 	'''
-	
-compute()
