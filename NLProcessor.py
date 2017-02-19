@@ -116,12 +116,6 @@ def HTMLParser(url):
     extractor = Goose()
     article = extractor.extract(raw_html=response.content)
     text = article.cleaned_text
-
-    if not text or str(text).isspace():
-        article = newspaper.Article(unicode(url))
-        article.download()
-        article.parse()
-        text = str(article.text)
    
     results = getLocations(text)
     return results
@@ -166,3 +160,4 @@ def getMLP(textbody):
     return send
 
 
+print(HTMLParser('http://www.cnn.com/2017/02/18/politics/donald-trump-florida-campaign-rally/index.html'))

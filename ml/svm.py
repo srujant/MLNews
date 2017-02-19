@@ -27,11 +27,12 @@ test_file = './data/test.csv'
 v = CountVectorizer(ngram_range=(1,3), stop_words='english')
 
 def HTMLParser(url):
-	article = newspaper.Article(url)
-	article.download()
-	article.parse()
-	return (str(article.text.encode("ascii", "ignore").upper()))
-
+	response = get(url)
+	extractor = Goose()
+	article = extractor.extract(raw_html=response.content)
+	text = article.cleaned_text
+	
+	return str(text.encode("ascii","ignore"))
 
 
 
@@ -145,6 +146,5 @@ def compute(url):
 	
 	prediction = forest.predict_proba(X_test)
 	return prediction[0][0]
-read()
-train()
-compute('http://www.cnbc.com/2017/02/18/heres-how-congress-is-handling-russia-investigations.html')
+
+

@@ -6,19 +6,23 @@ from flask import Flask, request
 from flask import render_template
 from flask import g
 from flask import jsonify
-from flask import redirect
+from iflask import redirect
 import download_corpora
 import NLProcessor
 import otherAPIs
 import scraper
 import searchFunction
 import stream
-
-svm.read()
-svm.train()
+import boto3
 
 app = Flask(__name__)
 
+dynamodb = boto3.resource('dynamodb')
+
+
+table = dynamodb.Table('hophacks')
+
+table = dynamodb.Table('hophacks')
 
 @app.route('/')
 def main():
@@ -51,8 +55,14 @@ def search():
         
     return render_template('search.html', articles_info = articles_info)
 
+@app.route('/getjson', methods = ['POST', 'GET'])
+	if request.method == 'POST':
+		date = "2/19"
+		reponse=table.get_item(Key={'dictionary': date})
+		print response
+        return reponse[1]
 
-app.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8081)))
+app.run(host=os.getenv('IP', '127.0.0.1'),port=int(os.getenv('PORT', 8081)))
 
 if __name__ == '__main__':
     app.run()

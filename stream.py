@@ -12,8 +12,12 @@ from iso3166 import countries
 import re
 import geojson
 from collections import OrderedDict
+import boto3
 
+dynamodb = boto3.resource('dynamodb')
 aggregatedDict = {}
+table = dynamodb.Table('hophacks')
+
 stateCodes = {
 	    'AK': 'Alaska',
         'AL': 'Alabama',
@@ -74,6 +78,27 @@ stateCodes = {
         'WY': 'Wyoming'
 }
 
+def insertDict(date, dict):
+    table.put_item(
+        Item={
+        'dictionary': date,
+        'dict': dict
+         }
+    )
+def insertJson(date, json):
+    table.put_item(
+        Item={
+        'dictionary': date,
+        'json': json
+         }
+    )
+def getItem(date):
+        reponse=table.get_item(
+                Key={'dictionary': date}
+        )
+        return reponse['Item']
+
+
 def getNewsAPI():
 	articles = urllib2.urlopen("https://newsapi.org/v1/sources").read()
 	articles = ast.literal_eval(articles)
@@ -117,16 +142,6 @@ def getNewsAPI():
 def addToDict():
 	masterList = api.generateResponse()
 	for x in range(0, len(masterList)):
-		if x is 6:
-			statesArticles = masterList[x][location]
-			tempDict['url'] = statesArticles[1]
-			tempDict['author'] = statesArticles[2]
-			tempDict['title'] = statesArticles[0]
-			tempDict['credRating'] = svm.compute(statesArticles[1])
-			tempDict['topic'] = 'other'
-			listInfo.append(tempDict)
-			aggregatedDict[location] = listInfo
-			continue
 		for y in range(0, len(masterList[x])):
 			for z in range(0, 4):
 				try:
@@ -246,7 +261,9 @@ def main():
 			None
 	test = './test.geojson'
 	with open('data.txt', 'w') as outfile:
-		json.dump(data, outfile)	
+		json.dump(data, outfile)
+	insertJson('2/19', data)
+	insertDict('2/19', aggregateDict)
 	with open('final.txt', 'w') as outfile:
 		json.dump(aggregatedDict, outfile)
 if __name__ == "__main__":
