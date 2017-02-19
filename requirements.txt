@@ -20,6 +20,8 @@ feedfinder2==0.0.1
 python-dateutil==2.4.0
 spacy==1.6.0
 nltk==3.2.2
-goose==1.0.25
-sklearn==0.18.1
+goose-extractor==1.0.25
+scikit-learn==0.18.1
 pandas==0.19.1
+numpy==1.12.0
+pyteaser==2.0
