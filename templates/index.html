@@ -1,5 +1,5 @@
 <html>
-	<title>BiPartisan | Home</title>
+	<title>Bipartisan | Home</title>
 	{% include 'head.html' %}
 	<body>
 		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
@@ -13,19 +13,19 @@
 					<div class="col-md-3"></div>
 					<div class="col-md-6 main-content">
 						<div class="panel panel-default main-panel">
-							<div class="panel-heading main-panel-heading">What is BiPartisan?</div>
+							<div class="panel-heading main-panel-heading">What is Bipartisan?</div>
 							<div class="panel-body main-panel-body">
-								BiPartisan is an app that lets you view news in a meaningful way by discovering the most truthful news from the right places.
+								Bipartisan is an app that lets you view news in a meaningful way by discovering the most truthful news from the right places.
 							</div>
 						</div>
 						<div class="panel panel-default main-panel">
 							<div class="panel-heading main-panel-heading">What Can I Do?</div>
 							<div class="panel-body main-panel-body">
-								Want news in a certain place? Check out our <a href="{{ url_for('stream') }}">NewStream</a>, a live map of the world. Click anywhere to see the top news in that location <i>right now</i>. News is organized by topic as well as our BiScore &#8212; a score that shows how truthful and accurate a certain article is.
+								Want news in a certain place? Check out our <a href="{{ url_for('stream') }}">B-Stream</a>, a live map of the world. Click anywhere to see the top news in that location <i>right now</i>. News is organized by topic as well as our B-Score &#8212; a score that shows how truthful and accurate a certain article is.
 								<br />
-								Have a specific article that you want us to analyze? Head over to the <a href="{{ url_for('bias') }}">BiScore</a> tab to enter the link to any article you stumble upon and get our official confidence rating in that article.
+								Have a specific article that you want us to analyze? Head over to the <a href="{{ url_for('bias') }}">B-Score</a> tab to enter the link to any article you stumble upon and get our official confidence rating in that article.
 								<br />
-								Don't have a specific article? Just search for a topic of choice in the search bar at the top!
+								Don't have a specific article? Just search for a topic of choice on the <a href="{{ url_for('search') }}">B-Search</a> page.
 							</div>
 						</div>
 						<div class="panel panel-default main-panel">
