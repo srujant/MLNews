@@ -10,7 +10,7 @@ x =  geojson.loads(read_data)
 
 x['features'][0]['properties']['name'] = 'Afghanistan'
 
-x['features'][0]['properties']['info'] = ['fdfa', 'fadfasf', 'dafafda']
+x['features'][0]['properties']['info'] = {'dfesf': {'fesfes': 'feaf'}}
 
 
 test = './test.geojson'

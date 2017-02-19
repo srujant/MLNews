@@ -19,7 +19,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 import random
-<<<<<<< HEAD
 from sklearn import linear_model, cross_validation
 
 
@@ -37,9 +36,6 @@ def clean(s):
 	meaningful_words = [w for w in words if not w in stops]
 	return( " ".join( meaningful_words ))
 
-from goose import Goose
-from requests import get  
-file_name = './data/fake.csv'
 
 
 
@@ -49,7 +45,7 @@ file_name = './data/fake.csv'
 # 	stops = set(stopwords.words("english"))
 # 	meaningful_words = [w for w in words if not w in stops]
 # 	return( " ".join( meaningful_words ))
->>>>>>> b16af8ecc3c57ba4196d05c653a6cd100b64056f
+
 
 # def get_ngrams(text, n ):
 # 	n_grams = ngrams(word_tokenize(text), n)
@@ -163,11 +159,12 @@ def compute():
 def read():
 	
 	global df
-	fields = ['type', 'text']
-	df = pd.read_csv(file_name, skiprows = 0, nrows= 7000, usecols=fields)	
+	
+	df = pd.read_csv(file_name)	
+	
 	df_goal = df['type']
 
-	df = df[df['type'].isin(['bias', 'fake', 'conspiracy', 'bs'])]
+	df = df[df['type'].isin(['bias', 'fake', 'conspiracy', 'real'])]
 	df["text"].fillna(" ",inplace=True)  
 	df["type"].fillna(" ",inplace=True)  
 	global input
@@ -183,11 +180,8 @@ def read():
 	#return
 
 
-def compute(url):
-	response = get(url)
-	extractor = Goose()
-	article = extractor.extract(raw_html=response.content)
-	text = article.cleaned_text
+def compute():
+	
 
 	'''
 	read()
@@ -207,7 +201,7 @@ def compute(url):
 	'''
 
 
-	'''
+	
 	read()
 	preds = []
 	v = CountVectorizer(ngram_range=(1,3), stop_words='english')
@@ -242,6 +236,6 @@ def compute(url):
 
 	prediction = model.predict_proba(X_test_2)
 	print prediction
-	'''
+	
 	
 compute()
