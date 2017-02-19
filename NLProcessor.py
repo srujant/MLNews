@@ -122,7 +122,7 @@ def HTMLParser(url):
         article.download()
         article.parse()
         text = str(article.text.encode("ascii", "ignore")
-
+    
     results = getLocations(text)
     return results
 
