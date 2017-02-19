@@ -166,3 +166,11 @@ button {
 .button-link:hover {
     text-decoration: none !important;
 }
+
+.white-link { 
+    color: white !important;
+}
+
+.white-link:hover {
+    color: #ecf0f1 !important;
+}
