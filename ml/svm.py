@@ -2,9 +2,6 @@ import pandas as pd
 import numpy as np
 from sklearn import datasets, svm, cross_validation
 import sys
-sys.path.append("../")
-sys.path.append("./data/ml")
-sys.path.append("./data")
 import re
 from sklearn.feature_extraction.text import CountVectorizer
 import sys
@@ -20,9 +17,9 @@ import urllib2
 import newspaper
 from sklearn.externals import joblib
 
-
-file_name = './data/fake.csv'
-test_file = './data/test.csv'
+print os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+file_name = 'fake.csv'
+test_file = 'test.csv'
 
 v = CountVectorizer(ngram_range=(1,3), stop_words='english')
 
