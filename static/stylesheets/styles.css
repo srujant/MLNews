@@ -7,6 +7,10 @@ body {
     font-family: 'Rubik', sans-serif !important;
 }
 
+select {
+    color: #000000;
+}
+
 .toolbar-left {
             display: block;
             position: absolute;
