@@ -31,7 +31,7 @@ An app that lets you discover the top news in locations around the world and dis
 - [Goose](https://github.com/GravityLabs/goose/wiki)
 	- Natural Language processing for determining the topic of articles in B-Stream	
 - [Scikit-learn] (https://github.com/scikit-learn/scikit-learn)
-	- Natural Language processing for determining the topic of articles in B-Stream
+	- Machine Learning for determining bias
 - [pandas](http://pandas.pydata.org/)
 	- Data
 - [Tweepy](https://github.com/tweepy/tweepy)
